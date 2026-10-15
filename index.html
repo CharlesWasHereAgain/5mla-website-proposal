@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5MLA Website Proposal | ARC Solutions and Technology</title>
+<meta name="description" content="Two website options for 5MLA Engineering & Construction, prepared by ARC Solutions and Technology.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Layout: a calm reading column for an older reader. Each option opens into a
+   wide stage holding the live website in a computer or phone frame. */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --ink:#16202b; --muted:#4f5b68; --line:#d6dde5;
+  --accent:#1c5a93; --accent-soft:#e3ecf6; --good:#1d7548; --stage:#e4e9ef;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",Verdana,sans-serif;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151b; --surface:#19212a; --ink:#edf1f5; --muted:#a9b4c0; --line:#2d3743;
+    --accent:#8bbcec; --accent-soft:#1c2b3b; --good:#6fd29d; --stage:#0b0f14; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10151b; --surface:#19212a; --ink:#edf1f5; --muted:#a9b4c0; --line:#2d3743;
+  --accent:#8bbcec; --accent-soft:#1c2b3b; --good:#6fd29d; --stage:#0b0f14; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.6}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+::selection{background:var(--accent);color:var(--surface)}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.prose{max-width:42rem}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2.1rem,4.8vw,3.3rem);font-weight:800;letter-spacing:-.015em}
+h2{font-size:clamp(1.7rem,3.4vw,2.35rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:700;font-size:1rem}
+.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:9px;background:var(--ink);color:var(--surface);font-weight:800;font-size:.95rem;letter-spacing:.04em}
+.brand small{display:block;font-family:var(--body);font-weight:400;font-size:.8rem;color:var(--muted);line-height:1.2}
+.topnav{display:flex;gap:.3rem}
+.topnav a{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none;padding:.5rem .8rem;border-radius:8px;transition:background-color .2s ease}
+.topnav a:hover{background:var(--accent-soft)}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--accent-soft),var(--bg))}
+.hero .wrap{padding-block:3.6rem 3.2rem;display:grid;gap:1.4rem}
+.meta{font-size:.95rem;color:var(--muted)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:46rem}
+.for{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-size:.98rem}
+.for b{font-family:var(--display)}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.4rem}
+.choice{display:grid;gap:.35rem;align-content:start;padding:1.5rem 1.6rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none;transition:border-color .2s ease,transform .16s var(--ease-out),box-shadow .25s ease}
+.choice:active{transform:scale(.985)}
+.choice .tag{font-family:var(--display);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.choice .row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.choice .name{font-family:var(--display);font-size:1.55rem;font-weight:800}
+.choice .price{font-family:var(--display);font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums}
+.choice .what{color:var(--muted)}
+.choice .go{margin-top:.4rem;font-weight:700;color:var(--accent)}
+.howto{list-style:none;margin:.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;counter-reset:h}
+.howto li{counter-increment:h;display:flex;gap:.8rem;align-items:flex-start;font-size:.98rem;color:var(--muted)}
+.howto li::before{content:counter(h);flex:none;width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:.95rem}
+.howto b{color:var(--ink)}
+
+/* Option sections */
+.opt{border-top:1px solid var(--line)}
+.opt>.wrap{padding-block:3.5rem;display:grid;gap:2rem}
+.opt-head{display:grid;gap:.7rem}
+.opt-head .prose{font-size:1.1rem;color:var(--muted)}
+.price-line{font-family:var(--display);font-size:1.1rem;color:var(--muted)}
+.price-line b{font-size:1.7rem;font-weight:800;color:var(--ink);margin-right:.35rem;font-variant-numeric:tabular-nums}
+
+.btn{font:inherit;font-size:1rem;font-weight:700;min-height:46px;padding:.5rem 1.15rem;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .16s var(--ease-out)}
+.btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+@media (hover:hover) and (pointer:fine){
+  .choice:hover{border-color:var(--accent);box-shadow:0 18px 40px -30px rgba(10,20,35,.5)}
+  .btn:hover{border-color:var(--accent)}
+}
+
+/* Live preview */
+.preview{display:grid;gap:.9rem;margin:0}
+.pv-tools{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between}
+.pv-group{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.stage{background:var(--stage);border-radius:14px;padding:clamp(10px,2.4vw,28px);display:flex;justify-content:center}
+.device{width:100%;max-width:1240px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 28px 60px -32px rgba(10,20,35,.5)}
+.bbar{display:flex;align-items:center;gap:.8rem;padding:.5rem .8rem;background:#eef1f5;border-bottom:1px solid #dde3ea;flex:none}
+.bbar .dots{display:flex;gap:.35rem}
+.bbar .dots i{width:.62rem;height:.62rem;border-radius:50%;background:#cfd6de}
+.url{flex:1;min-width:0;font-family:var(--body);font-size:.8rem;color:#4f5b68;background:#fff;border:1px solid #dde3ea;border-radius:999px;padding:.22rem .85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.close-full{display:none;font:700 .9rem var(--body);min-height:36px;padding:.3rem .9rem;border-radius:8px;border:0;background:#16202b;color:#fff;cursor:pointer}
+.viewport{position:relative;height:760px;flex:none;background:#fff}
+.viewport iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#fff}
+.preview[data-device="phone"] .device{max-width:400px;border:10px solid #14171b;border-radius:44px}
+.preview[data-device="phone"] .bbar{padding:.9rem .8rem .5rem}
+.preview[data-device="phone"] .bbar .dots{display:none}
+.preview[data-device="phone"] .viewport{height:780px}
+.preview figcaption{font-size:.95rem;color:var(--muted)}
+/* Full screen (the stage is the full-screen element) */
+.stage:fullscreen{background:#0b0e12;padding:0;border-radius:0;align-items:center}
+.stage:fullscreen .device{max-width:none;width:100%;height:100%;border:0;border-radius:0}
+.stage:fullscreen .viewport{height:auto;flex:1 1 auto;min-height:0}
+.stage:fullscreen .close-full{display:inline-flex}
+.preview[data-device="phone"] .stage:fullscreen .device{width:min(400px,100%);height:min(880px,96vh);border:10px solid #14171b;border-radius:44px}
+@media (max-width:720px){
+  .pv-group.devices{display:none}
+  .preview[data-device="phone"] .viewport{height:min(780px,78vh)}
+}
+
+.details{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:2rem;align-items:start}
+.checks{list-style:none;padding:0;margin:1rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.75rem 2rem}
+.checks li{position:relative;padding-left:1.7rem}
+.checks li::before{content:"";position:absolute;left:.3rem;top:.3em;width:.42em;height:.85em;border:solid var(--good);border-width:0 .17em .17em 0;transform:rotate(45deg)}
+.checks li b{display:block}
+.checks li span{color:var(--muted);font-size:.95rem}
+.fit{background:var(--accent-soft);border-radius:12px;padding:1.4rem 1.5rem;display:grid;gap:.6rem}
+
+.sec{border-top:1px solid var(--line)}
+.sec>.wrap{padding-block:3.5rem;display:grid;gap:1.6rem}
+.table-box{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:34rem}
+th,td{text-align:left;padding:.85rem 1.1rem;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child th,tr:last-child td{border-bottom:0}
+thead th{font-family:var(--display);font-size:1.05rem;background:var(--accent-soft)}
+thead th small{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:.9rem}
+tbody th{font-weight:700;width:34%}
+td.no{color:var(--muted)}
+td.yes{color:var(--good);font-weight:700}
+tr.total th,tr.total td{font-family:var(--display);font-size:1.15rem;font-weight:800;font-variant-numeric:tabular-nums}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2.4rem}
+.reasons div{display:grid;gap:.35rem}
+.reasons b{font-family:var(--display);font-size:1.12rem}
+.reasons p{color:var(--muted)}
+.suggest{background:var(--accent-soft);border-radius:12px;padding:1.5rem 1.6rem;display:grid;gap:.5rem}
+.suggest p{max-width:46rem}
+.both{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.both ul{margin:.8rem 0 0;padding-left:1.2rem;display:grid;gap:.4rem}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:.4rem;align-content:start}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1.1rem;width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--surface)}
+.steps b{font-family:var(--display);font-size:1.1rem}
+.steps span{color:var(--muted)}
+.foot{border-top:1px solid var(--line);background:var(--surface)}
+.foot .wrap{padding-block:2.4rem 3rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:2rem;color:var(--muted);font-size:.92rem}
+.foot .brand{margin-bottom:.6rem}
+.foot p+p{margin-top:.5rem}
+
+@media (max-width:860px){
+  .details,.both,.foot .wrap{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .topnav{display:none}
+}
+@media (max-width:620px){
+  body{font-size:18px}
+  .choices,.checks,.reasons,.steps,.howto{grid-template-columns:1fr}
+  table{min-width:0;font-size:.88rem}
+  th,td{padding:.7rem .6rem}
+  td{overflow-wrap:break-word}
+  thead th{font-size:.85rem}
+  tbody th{width:36%}
+  tr.total th,tr.total td{font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .choice:active,.btn:active{transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></g></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></g></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">ARC</span><span>ARC Solutions and Technology<small>Website proposal</small></span></a>
+    <nav class="topnav" aria-label="Proposal sections">
+      <a href="#essential">Essential</a>
+      <a href="#professional">Professional</a>
+      <a href="#compare">Compare</a>
+      <a href="#next">Next steps</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <p class="meta">Website proposal, October 2026</p>
+    <h1>Two website options for 5MLA Engineering &amp; Construction</h1>
+    <p class="lead">Below you can try each website yourself, exactly as your customers would see it. Both designs use your real company details. The photos are high-quality placeholders, and we will replace them with photos of your own projects.</p>
+    <div class="for"><span><b>Prepared for</b> 5MLA Engineering &amp; Construction, North Hills, CA</span><span><b>Prepared by</b> ARC Solutions and Technology</span></div>
+    <div class="choices">
+      <a class="choice" href="#essential">
+        <span class="tag">Option 1</span>
+        <span class="row"><span class="name">Essential</span><span class="price">$500</span></span>
+        <span class="what">A clean, one-page website. A professional business card that people can find online.</span>
+        <span class="go">Try the design &darr;</span>
+      </a>
+      <a class="choice" href="#professional">
+        <span class="tag">Option 2</span>
+        <span class="row"><span class="name">Professional</span><span class="price">$1,500</span></span>
+        <span class="what">A complete five-page company website that shows off your work and brings in estimate requests.</span>
+        <span class="go">Try the design &darr;</span>
+      </a>
+    </div>
+    <ol class="howto" aria-label="How to look at the designs">
+      <li><span><b>Scroll inside the window</b> to move through each website.</span></li>
+      <li><span><b>Press Phone</b> to see how it looks on a mobile phone.</span></li>
+      <li><span><b>Press Full screen</b> or <b>Open in new tab</b> to see it larger.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- =================================================================== OPTION 1 -->
+<section class="opt" id="essential">
+  <div class="wrap">
+    <div class="opt-head">
+      <h2>Option 1: Essential website</h2>
+      <p class="price-line"><b>$500</b>paid once</p>
+      <p class="prose">Everything on one page that customers scroll down: who you are, what you build, your license, a few photos, and how to reach you. Simple, clean and easy to use.</p>
+    </div>
+
+    <figure class="preview" data-device="desktop">
+      <div class="pv-tools">
+        <div class="pv-group devices" role="group" aria-label="Choose a screen size">
+          <button type="button" class="btn" data-device-btn="desktop" aria-pressed="true"><svg><use href="#i-monitor"/></svg>Computer</button>
+          <button type="button" class="btn" data-device-btn="phone" aria-pressed="false"><svg><use href="#i-mobile"/></svg>Phone</button>
+        </div>
+        <div class="pv-group">
+          <button type="button" class="btn" data-full><svg><use href="#i-expand"/></svg>Full screen</button>
+          <a class="btn" href="essential/index.html" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg>Open in new tab</a>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="device">
+          <div class="bbar"><span class="dots"><i></i><i></i><i></i></span><span class="url" data-url>5mlaconstruction.com</span><button type="button" class="close-full" data-close-full>Close full screen</button></div>
+          <div class="viewport"><iframe src="essential/index.html" title="Sample Essential website for 5MLA" loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <figcaption>A working sample. Try the menu links, or the message form at the bottom.</figcaption>
+    </figure>
+
+    <div class="details">
+      <div>
+        <h3>What's included for $500</h3>
+        <ul class="checks">
+          <li><b>One web page</b><span>All your information in one place</span></li>
+          <li><b>Clean, professional look</b><span>Your name, logo and colors</span></li>
+          <li><b>Works on phones and computers</b><span>Adjusts itself to any screen</span></li>
+          <li><b>Tap-to-call button</b><span>Customers call you with one tap</span></li>
+          <li><b>Your license and insurance shown</b><span>Customers see you're licensed and insured</span></li>
+          <li><b>List of what you build</b><span>Offices, retail, multi-family and more</span></li>
+          <li><b>Up to 6 project photos</b><span>A small selection of your work</span></li>
+          <li><b>Simple contact form</b><span>Messages arrive in your email</span></li>
+          <li><b>1 round of changes</b><span>You review it, we adjust it</span></li>
+          <li><b>Ready in about 1 week</b><span>After we receive your photos and details</span></li>
+        </ul>
+      </div>
+      <aside class="fit">
+        <h3>A good fit if&hellip;</h3>
+        <p>Most of your work comes from referrals and repeat clients. You mainly want people who hear your name to find you online, see that you're licensed, and call you.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== OPTION 2 -->
+<section class="opt" id="professional">
+  <div class="wrap">
+    <div class="opt-head">
+      <h2>Option 2: Professional website</h2>
+      <p class="price-line"><b>$1,500</b>paid once</p>
+      <p class="prose">A complete company website with five pages, a design made only for 5MLA, a moving photo showcase, a project gallery, and a step-by-step estimate form. It is built to win new commercial clients.</p>
+    </div>
+
+    <figure class="preview" data-device="desktop">
+      <div class="pv-tools">
+        <div class="pv-group devices" role="group" aria-label="Choose a screen size">
+          <button type="button" class="btn" data-device-btn="desktop" aria-pressed="true"><svg><use href="#i-monitor"/></svg>Computer</button>
+          <button type="button" class="btn" data-device-btn="phone" aria-pressed="false"><svg><use href="#i-mobile"/></svg>Phone</button>
+        </div>
+        <div class="pv-group">
+          <button type="button" class="btn" data-full><svg><use href="#i-expand"/></svg>Full screen</button>
+          <a class="btn" href="professional/index.html" target="_blank" rel="noopener"><svg><use href="#i-external"/></svg>Open in new tab</a>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="device">
+          <div class="bbar"><span class="dots"><i></i><i></i><i></i></span><span class="url" data-url>5mlaconstruction.com</span><button type="button" class="close-full" data-close-full>Close full screen</button></div>
+          <div class="viewport"><iframe src="professional/index.html" title="Sample Professional website for 5MLA" loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <figcaption>A working sample. Try the menu, the photo buttons on the first picture, the project filters, and the estimate form on the Contact page.</figcaption>
+    </figure>
+
+    <div class="details">
+      <div>
+        <h3>What's included for $1,500</h3>
+        <ul class="checks">
+          <li><b>Everything in Essential</b><span>Plus all of the items below</span></li>
+          <li><b>Five separate pages</b><span>Home, About, Services, Projects, Contact</span></li>
+          <li><b>A design made only for 5MLA</b><span>Not a ready-made template</span></li>
+          <li><b>Moving photo showcase</b><span>Large photos of your work on the first screen</span></li>
+          <li><b>Project gallery with filters</b><span>Up to 30 photos, sorted by building type</span></li>
+          <li><b>Step-by-step estimate form</b><span>Asks for project type, size, timing and contact</span></li>
+          <li><b>Credentials up front</b><span>License, bond, insurance and BuildZoom score</span></li>
+          <li><b>Client reviews section</b><span>Lets past clients vouch for you</span></li>
+          <li><b>Google setup</b><span>Google business listing and search basics</span></li>
+          <li><b>We write the words</b><span>You check them; you don't have to write them</span></li>
+          <li><b>3 rounds of changes</b><span>More chances to get it just right</span></li>
+          <li><b>30 days of help after launch</b><span>Questions and small fixes included</span></li>
+        </ul>
+      </div>
+      <aside class="fit">
+        <h3>A good fit if&hellip;</h3>
+        <p>You want to win new commercial clients. Property owners and developers often compare several contractors online before they call anyone. A fuller website with your past projects, credentials and an estimate form helps 5MLA stand out, and it collects requests while you're busy on site.</p>
+        <p>Ready in about 2 to 3 weeks.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== COMPARE -->
+<section class="sec" id="compare">
+  <div class="wrap">
+    <h2>The two options side by side</h2>
+    <div class="table-box">
+      <table>
+        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Essential<small>$500</small></th><th scope="col">Professional<small>$1,500</small></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Number of pages</th><td>1 page</td><td>5 pages</td></tr>
+          <tr><th scope="row">Design</th><td>Clean, professional layout</td><td>Made only for 5MLA</td></tr>
+          <tr><th scope="row">Works on phones and tablets</th><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">Tap-to-call button</th><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">License and insurance shown</th><td class="yes">Yes</td><td class="yes">Yes, plus bond and BuildZoom score</td></tr>
+          <tr><th scope="row">Moving photo showcase</th><td class="no">Not included</td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">Project photos</th><td>Up to 6</td><td>Up to 30, with filters</td></tr>
+          <tr><th scope="row">Contact form</th><td>Simple message form</td><td>Step-by-step estimate form</td></tr>
+          <tr><th scope="row">Client reviews section</th><td class="no">Not included</td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">Google business listing setup</th><td class="no">Not included</td><td class="yes">Yes</td></tr>
+          <tr><th scope="row">Who writes the words</th><td>You provide them, we tidy them up</td><td>We write them for you</td></tr>
+          <tr><th scope="row">Rounds of changes</th><td>1</td><td>3</td></tr>
+          <tr><th scope="row">Help after launch</th><td>7 days</td><td>30 days</td></tr>
+          <tr><th scope="row">Time to finish</th><td>About 1 week</td><td>About 2 to 3 weeks</td></tr>
+          <tr class="total"><th scope="row">Price, paid once</th><td>$500</td><td>$1,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>What the extra $1,000 gets you</h2>
+    <div class="reasons">
+      <div><b>A first impression that wins jobs</b><p>Large, moving photos and bold headlines make 5MLA look like the established company it is, right from the first screen.</p></div>
+      <div><b>More room to show your work</b><p>A full gallery sorted by building type. For a commercial builder, photos of finished projects are often what convinces a client to call.</p></div>
+      <div><b>Better phone calls</b><p>The estimate form asks for the project type, size and timing, so you know what a job is about before you call back.</p></div>
+      <div><b>Easier to find, and we do the writing</b><p>We set up your Google business listing, write the text for you, and help for 30 days after the site goes live.</p></div>
+    </div>
+    <div class="suggest">
+      <h3>Our suggestion</h3>
+      <p>For a commercial builder like 5MLA, we suggest the Professional website. Your clients are businesses and developers planning large projects, and they usually look carefully at a contractor's past work before they call. If you would rather start simple, the Essential website is a good first step and can be expanded later.</p>
+    </div>
+    <div class="both">
+      <div><h3>Included in both options</h3><ul><li>Works on phones, tablets and computers</li><li>A secure website (the padlock in the address bar)</li><li>Your license number shown clearly</li><li>Messages from the website sent to your email</li></ul></div>
+      <div><h3>Not included in the price</h3><ul><li>Your web address and hosting (keeping the site online) have a small separate fee. We will tell you the exact amount before we start.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="next">
+  <div class="wrap">
+    <h2>What happens next</h2>
+    <ol class="steps">
+      <li><b>Pick an option</b><span>Just tell us &ldquo;Essential&rdquo; or &ldquo;Professional.&rdquo;</span></li>
+      <li><b>Send what you have</b><span>Your logo if you have one, and photos of your projects. Phone photos are fine.</span></li>
+      <li><b>Review the first draft</b><span>We show you the website privately, then make your changes.</span></li>
+      <li><b>Go live</b><span>Your website goes online, and customers can find and contact you.</span></li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark">ARC</span><span>ARC Solutions and Technology<small>Websites for local businesses</small></span></a>
+      <p>Questions? Simply reply to the message this link came in, and we will get back to you.</p>
+    </div>
+    <div>
+      <p>These are sample designs. The final colors, photos and wording will be chosen together with you.</p>
+      <p>Company details are from public California license (CSLB) and BuildZoom records. Photos are free-license placeholders from Unsplash and do not show 5MLA projects; they will be replaced with your own project photos. The reviews shown are samples.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const narrow = window.matchMedia('(max-width: 720px)');
+  const canFull = !!(document.fullscreenEnabled && document.documentElement.requestFullscreen);
+
+  const previews = $$('.preview');
+  previews.forEach((pv) => {
+    const stage = $('.stage', pv);
+    const device = $('.device', pv);
+    const btns = $$('[data-device-btn]', pv);
+    const setDevice = (dev) => {
+      pv.dataset.device = dev;
+      btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.deviceBtn === dev)));
+    };
+    btns.forEach((b) => b.addEventListener('click', () => {
+      if (pv.dataset.device === b.dataset.deviceBtn) return;
+      setDevice(b.dataset.deviceBtn);
+      if (!reduce && device.animate) device.animate([{ opacity: 0, transform: 'scale(.985)' }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' });
+    }));
+    if (narrow.matches) setDevice('phone');
+
+    const fullBtn = $('[data-full]', pv);
+    if (!canFull) fullBtn.hidden = true;
+    fullBtn.addEventListener('click', () => {
+      stage.requestFullscreen().catch(() => window.open($('a[target="_blank"]', pv).href, '_blank', 'noopener'));
+    });
+    $('[data-close-full]', pv).addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); });
+  });
+
+  // The embedded sites report which page they are showing; mirror it in the address bar.
+  window.addEventListener('message', (e) => {
+    const d = e.data;
+    if (!d || d.source !== '5mla-mockup' || typeof d.page !== 'string') return;
+    const pv = previews.find((p) => $('iframe', p).contentWindow === e.source);
+    if (!pv) return;
+    $('[data-url]', pv).textContent = '5mlaconstruction.com' + (d.page === 'home' ? '' : '/' + d.page.replace(/[^a-z]/g, ''));
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5MLA Engineering &amp; Construction | Sample Professional Website</title>
+<meta name="description" content="Sample five-page website for 5MLA Engineering & Construction, prepared by ARC Solutions and Technology.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-io:cubic-bezier(0.77,0,0.175,1);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#101317}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.app{container:site/inline-size;--sh:100svh}
+/* ==========================================================================
+   SHARED MOCKUP BASICS
+   ========================================================================== */
+.site{position:relative;min-height:100%}
+.site img{display:block;width:100%;height:100%;object-fit:cover}
+:where(.site) a{text-decoration:none;color:inherit}
+:where(.site) button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:where(.site) p{margin:0}
+:where(.site) h1,:where(.site) h2,:where(.site) h3{margin:0;line-height:1.05;text-wrap:balance}
+:where(.site) input,:where(.site) select,:where(.site) textarea{font:inherit}
+
+/* ==========================================================================
+   $500 ESSENTIAL SITE  (clean, light, one page)
+   ========================================================================== */
+.ess{--e-ink:#14202e;--e-blue:#1f5c99;--e-blue-d:#174a7c;--e-soft:#eef3f8;--e-line:#dbe3ec;--e-mute:#4d5a68;--epx:clamp(18px,5cqw,64px);font-family:"Archivo",Arial,sans-serif;color:var(--e-ink);background:#fff;line-height:1.5}
+.e-head{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:14px var(--epx);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--e-line)}
+.e-logo{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem;line-height:1.15}
+.e-mark{background:var(--e-ink);color:#fff;font-weight:800;letter-spacing:.05em;padding:.35rem .55rem;border-radius:4px;font-size:1rem}
+.e-nav{display:flex;gap:1.6rem;font-weight:600;font-size:.95rem}
+.e-nav a{padding:.3rem 0;border-bottom:2px solid transparent;transition:border-color .2s ease}
+.e-nav a:hover{border-color:var(--e-blue)}
+.e-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--e-blue);color:#fff!important;font-weight:700;padding:.8rem 1.25rem;border-radius:8px;transition:background-color .2s ease,transform .16s var(--ease-out);white-space:nowrap}
+.e-btn:hover{background:var(--e-blue-d)}
+.e-btn:active{transform:scale(.97)}
+.e-btn.alt{background:#fff;color:var(--e-ink)!important;border:1.5px solid var(--e-ink)}
+.e-btn.alt:hover{background:var(--e-soft)}
+.e-btn.sm{padding:.6rem 1rem;font-size:.92rem}
+.e-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4cqw,56px);align-items:center;padding:clamp(36px,6cqw,80px) var(--epx);background:linear-gradient(180deg,var(--e-soft),#fff)}
+.e-hero h1{font-size:clamp(34px,4.6cqw,58px);font-weight:800;letter-spacing:-.015em;margin-bottom:.4em}
+.e-hero p{font-size:clamp(16px,1.5cqw,19px);color:var(--e-mute);max-width:32em}
+.e-ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.e-lic{margin-top:1.3rem!important;font-size:.9rem!important;font-weight:600;color:var(--e-ink)!important}
+.e-hero-img{aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 24px 48px -28px rgba(20,32,46,.55)}
+.e-sec{padding:clamp(44px,6cqw,80px) var(--epx);border-top:1px solid var(--e-line)}
+.e-sec h2{font-size:clamp(26px,3cqw,38px);font-weight:800;letter-spacing:-.01em;margin-bottom:.9em}
+.e-svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem}
+.e-svc li{background:var(--e-soft);border-radius:8px;padding:1rem;font-weight:600;font-size:.95rem;display:flex;gap:.6rem;align-items:flex-start}
+.e-svc li::before{content:"";flex:none;width:.6rem;height:.6rem;margin-top:.4rem;border-radius:2px;background:var(--e-blue)}
+.e-about{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,4cqw,56px);align-items:start}
+.e-about p{color:var(--e-mute);font-size:1.02rem}
+.e-about p+p{margin-top:.9rem}
+.e-licbox{border:2px solid var(--e-ink);border-radius:10px;padding:1.4rem;display:grid;gap:.5rem}
+.e-licbox b{font-size:1.2rem}
+.e-licbox span{color:var(--e-mute);font-size:.95rem}
+.e-gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
+.e-gal figure{margin:0}
+.e-gal .ph{aspect-ratio:4/3;border-radius:10px;overflow:hidden}
+.e-gal figcaption{font-size:.88rem;color:var(--e-mute);margin-top:.45rem}
+.e-contact{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(24px,4cqw,56px);align-items:start}
+.e-info{display:grid;gap:1.1rem;font-size:1.02rem}
+.e-info b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--e-blue)}
+.e-big{font-size:1.5rem;font-weight:800}
+.e-form{display:grid;gap:.9rem;background:var(--e-soft);border-radius:12px;padding:clamp(18px,3cqw,32px)}
+.e-field{display:grid;gap:.35rem}
+.e-field label{font-weight:600;font-size:.92rem}
+.e-field input,.e-field textarea{width:100%;border:1.5px solid #c3cdd8;border-radius:8px;padding:.75rem .85rem;background:#fff;color:var(--e-ink);font-size:1rem}
+.e-field textarea{min-height:110px;resize:vertical}
+.e-field input:focus,.e-field textarea:focus{outline:3px solid rgba(31,92,153,.35);border-color:var(--e-blue)}
+.e-field [aria-invalid="true"]{border-color:#b42318}
+.f-err{color:#b42318;font-size:.88rem;font-weight:600}
+.e-form .e-btn{justify-self:start}
+.e-done{background:#fff;border-radius:10px;padding:1.4rem;display:grid;gap:.5rem;border:1.5px solid #9fd3b5}
+.e-done b{font-size:1.2rem}
+.e-demo{font-size:.85rem;color:var(--e-mute)}
+.e-foot{padding:24px var(--epx);background:var(--e-ink);color:#c5cfda;font-size:.88rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
+.ess :focus-visible{outline:3px solid var(--e-blue);outline-offset:2px}
+
+@container site (max-width: 820px){
+  .e-nav{display:none}
+  .e-hero,.e-about,.e-contact{grid-template-columns:1fr}
+  .e-hero-img{order:-1}
+  .e-svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .e-gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container site (max-width: 480px){
+  .e-logo span:last-child{display:none}
+  .e-ctas .e-btn{flex:1 1 100%}
+  .e-gal{grid-template-columns:1fr}
+}
+
+/* ==========================================================================
+   $1,500 PROFESSIONAL SITE  (dark steel + safety amber, condensed display type)
+   ========================================================================== */
+.pro{--ink:#101317;--steel:#16191e;--steel2:#1f242b;--line-d:#2b323b;--paper:#f2f3f4;--amber:#f5a623;--amber-hi:#ffb83d;--amber-ink:#8a5600;--mute:#59626c;--mute-d:#aeb6bf;--px:clamp(20px,5.5cqw,84px);--py:clamp(64px,9cqw,128px);font-family:"Barlow",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;font-size:17px}
+.pro .d{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.004em;line-height:.95}
+.pro :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.p-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--amber);color:var(--ink)!important;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:18px;letter-spacing:.05em;text-transform:uppercase;padding:13px 22px;border-radius:2px;white-space:nowrap;transition:background-color .2s ease,transform .16s var(--ease-out),border-color .2s ease}
+.p-btn:hover{background:var(--amber-hi)}
+.p-btn:active{transform:scale(.97)}
+.p-btn.lg{font-size:20px;padding:17px 28px}
+.p-btn.ghost{background:transparent;color:#fff!important;border:1.5px solid rgba(255,255,255,.75)}
+.p-btn.ghost:hover{background:rgba(255,255,255,.1)}
+.p-btn.ink{background:var(--ink);color:#fff!important}
+.p-btn.ink:hover{background:#2a3038}
+.p-btn.line{background:transparent;border:1.5px solid var(--ink)}
+.p-btn.line:hover{background:var(--paper)}
+.p-btn svg{width:1em;height:1em}
+.p-link{display:inline-flex;align-items:center;gap:.5rem;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--amber);padding-bottom:3px}
+.p-link.light{color:#fff}
+.p-link svg{width:1em;height:1em;transition:transform .2s var(--ease-out)}
+.p-link:hover svg{transform:translateX(4px)}
+
+/* Header */
+.p-header{position:sticky;top:0;z-index:30;height:78px;margin-bottom:-78px;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:0 var(--px);color:#fff;transition:background-color .35s ease,box-shadow .35s ease}
+.p-header.is-solid{background:rgba(14,16,20,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.07)}
+.p-logo{display:flex;align-items:center;gap:.7rem}
+.p-mark{background:var(--amber);color:var(--ink);font-family:"Barlow Condensed",Arial,sans-serif;font-weight:800;font-size:22px;letter-spacing:.06em;padding:3px 9px;line-height:1.2}
+.p-lt{font-weight:600;font-size:13px;line-height:1.15;letter-spacing:.02em}
+.p-nav{display:flex;gap:2rem;position:relative}
+.p-nav a{font-weight:600;font-size:15px;padding:6px 0;position:relative;opacity:.8;transition:opacity .2s ease}
+.p-nav a:hover,.p-nav a.on{opacity:1}
+.p-nav-bar{position:absolute;left:0;bottom:0;width:100px;height:2px;background:var(--amber);transform-origin:left;transform:scaleX(0);transition:transform .55s var(--ease-io);pointer-events:none}
+.pro h1:focus{outline:none}
+
+/* Page-change wipe: covers the content below the header */
+
+.p-wipe{position:fixed;left:0;right:0;top:78px;bottom:0;z-index:60;overflow:hidden}
+.w-amber,.w-dark{position:absolute;inset:0;clip-path:inset(0 100% 0 0)}
+.w-amber{background:#f5a623}
+.w-dark{background:#101317;display:grid;place-content:center;justify-items:center;gap:16px;color:#fff}
+.w-mark{background:#f5a623;color:#101317;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:800;font-size:20px;letter-spacing:.06em;padding:2px 9px;opacity:0}
+.w-label{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(40px,9cqw,104px);letter-spacing:.01em;opacity:0}
+.p-hact{display:flex;align-items:center;gap:1.1rem}
+.p-phone{font-weight:600;font-size:15px;display:flex;align-items:center;gap:.45rem}
+.p-phone svg{width:16px;height:16px;color:var(--amber)}
+.p-burger{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;min-width:46px;padding:0 15px!important;border:1.5px solid rgba(255,255,255,.45)!important;border-radius:2px;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s ease,background-color .2s ease}
+.p-burger:hover{border-color:#fff!important;background:rgba(255,255,255,.08)!important}
+.p-burger-label{font-weight:700}
+.p-burger{flex:none}
+.p-hact .p-btn{flex:none}
+.p-burger span{display:grid;gap:5px}
+.p-burger i{display:block;width:20px;height:2px;background:#fff}
+
+/* Hero slideshow */
+.p-hero{position:relative;min-height:max(560px,var(--sh));display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;background:var(--ink)}
+.p-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.2s ease}
+.p-slide.is-active{opacity:1}
+.p-slide img{transform:scale(1.1)}
+.p-slide.is-active img{animation:kb 9s ease-out forwards}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.p-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,15,.9) 0%,rgba(10,12,15,.62) 45%,rgba(10,12,15,.18) 100%),linear-gradient(0deg,rgba(10,12,15,.75) 0%,rgba(10,12,15,0) 40%);pointer-events:none}
+.p-sentinel{position:absolute;top:70px;left:0;width:1px;height:1px}
+.p-hero-in{position:relative;z-index:2;padding:130px var(--px) clamp(110px,12cqw,150px);max-width:min(100%,1100px)}
+.p-hero h1{font-size:clamp(46px,6.6cqw,104px);max-width:13.5em}
+.p-hero-sub{font-size:clamp(17px,1.55cqw,21px);max-width:34em;color:rgba(255,255,255,.88);margin-top:1.1rem!important}
+.p-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.p-dots{position:absolute;z-index:3;left:var(--px);right:var(--px);bottom:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;max-width:620px}
+.p-dots button{display:grid;gap:.55rem;text-align:left;padding:8px 0;color:rgba(255,255,255,.7);font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s ease}
+.p-dots button.is-active{color:#fff}
+.p-dots i{display:block;height:3px;background:rgba(255,255,255,.28);position:relative;overflow:hidden}
+.p-dots i::after{content:"";position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:left}
+.p-dots .is-active i::after{animation:fill 6.5s linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+
+/* Stats */
+.p-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--amber);color:var(--ink)}
+.p-stat{padding:clamp(26px,3.4cqw,44px) var(--px);border-left:1px solid rgba(16,19,23,.16);display:grid;gap:.35rem;align-content:start}
+.p-stat:first-child{border-left:0}
+.p-stat b{font-size:clamp(38px,4.4cqw,66px);font-variant-numeric:tabular-nums;white-space:nowrap}
+.p-stat span{font-weight:600;font-size:15px;max-width:16em}
+
+/* Intro */
+.p-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6cqw,96px);align-items:center;padding:var(--py) var(--px)}
+.p-intro-media{position:relative;padding-bottom:14%}
+.p-intro-media .a{aspect-ratio:4/5;width:78%;overflow:hidden}
+.p-intro-media .b{position:absolute;right:0;bottom:0;width:50%;aspect-ratio:1/1;overflow:hidden;border:10px solid #fff;box-shadow:0 30px 50px -30px rgba(16,19,23,.6)}
+.p-intro-txt{display:grid;gap:1.3rem;align-content:start}
+.p-intro-txt h2{font-size:clamp(38px,4.6cqw,66px)}
+.p-intro-txt>p{font-size:18px;color:var(--mute);max-width:34em}
+.p-ticks{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.p-ticks li{display:flex;gap:.8rem;align-items:flex-start;font-weight:600}
+.p-ticks li::before{content:"";flex:none;width:18px;height:10px;margin-top:6px;border:solid var(--amber);border-width:0 0 3px 3px;transform:rotate(-45deg)}
+
+/* Services showcase */
+.p-svc{background:var(--ink);color:#fff;padding:var(--py) var(--px)}
+.p-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-bottom:clamp(28px,4cqw,56px)}
+.p-head-row h2{font-size:clamp(40px,5cqw,72px)}
+.p-svc-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(28px,5cqw,80px);align-items:stretch}
+.p-svc-list{display:grid;align-content:start}
+.p-svc-item{display:grid;grid-template-rows:auto 0fr;row-gap:0;text-align:left;padding:18px 0!important;border-top:1px solid var(--line-d)!important;transition:grid-template-rows .35s var(--ease-out),row-gap .35s var(--ease-out)}
+.p-svc-item.is-active{grid-template-rows:auto 1fr;row-gap:.25rem}
+.p-svc-item:last-child{border-bottom:1px solid var(--line-d)!important}
+.p-svc-item .d{font-size:clamp(26px,2.6cqw,36px);color:#7e8791;transition:color .25s ease,transform .3s var(--ease-out);display:flex;align-items:center}
+.p-svc-item .d::before{content:"";width:0;height:3px;background:var(--amber);transition:width .3s var(--ease-out)}
+.p-svc-item small{font-size:15px;color:var(--mute-d);min-height:0;overflow:hidden;opacity:0;transition:opacity .3s ease}
+.p-svc-item.is-active .d{color:#fff}
+.p-svc-item.is-active .d::before{width:28px;margin-right:.6rem}
+.p-svc-item.is-active small{opacity:1}
+.p-svc-media{position:relative;min-height:440px;overflow:hidden;background:var(--steel2)}
+.p-svc-media img{position:absolute;inset:0;opacity:0;transform:scale(1.05);transition:opacity .6s ease,transform 1.1s var(--ease-out)}
+.p-svc-media img.is-active{opacity:1;transform:scale(1)}
+
+/* Featured projects */
+.p-feat{padding:var(--py) var(--px)}
+.p-feat-grid{display:grid;grid-template-columns:1.45fr 1fr;grid-auto-rows:clamp(220px,23cqw,330px);gap:clamp(12px,1.6cqw,22px)}
+.p-tile{position:relative;overflow:hidden;display:block;background:var(--steel)}
+.p-tile.big{grid-row:span 2}
+.p-tile img{transition:transform .9s var(--ease-out)}
+.p-tile:hover img{transform:scale(1.05)}
+.p-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,15,.85) 0%,rgba(10,12,15,0) 55%)}
+.p-tile-cap{position:absolute;z-index:2;left:clamp(16px,2cqw,28px);right:clamp(16px,2cqw,28px);bottom:clamp(16px,2cqw,26px);color:#fff;display:grid;gap:.3rem}
+.p-tile-cap small{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-size:14px}
+.p-tile-cap b{font-size:clamp(24px,2.4cqw,34px)}
+
+/* Process */
+.p-proc{background:var(--paper);padding:var(--py) var(--px)}
+.p-proc h2{font-size:clamp(40px,5cqw,72px);margin-bottom:clamp(28px,4cqw,56px)}
+.p-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.2cqw,32px)}
+.p-steps li{display:grid;gap:.8rem;align-content:start}
+.p-steps .ph{aspect-ratio:4/3;overflow:hidden}
+.p-steps .n{font-size:44px;color:var(--amber-ink)}
+.p-steps h3{font-size:26px}
+.p-steps p{color:var(--mute);font-size:16px}
+
+/* Reviews */
+.p-rev{padding:var(--py) var(--px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(28px,5cqw,80px);align-items:start}
+.p-rev h2{font-size:clamp(40px,5cqw,72px)}
+.p-rev-l{display:grid;gap:1.4rem;align-content:start}
+.p-rev-nav{display:flex;gap:.6rem}
+.p-rev-nav button{width:52px;height:52px;display:grid;place-items:center;border:1.5px solid var(--ink)!important;border-radius:2px;transition:background-color .2s ease,transform .16s var(--ease-out)}
+.p-rev-nav button:hover{background:var(--paper)}
+.p-rev-nav button:active{transform:scale(.95)}
+.p-rev-nav svg{width:20px;height:20px}
+.p-q{margin:0;display:grid;gap:1.4rem}
+.p-q p{font-size:clamp(24px,2.8cqw,38px);line-height:1.25;font-weight:500;position:relative;padding-top:.9em}
+.p-q p::before{content:"\201C";position:absolute;top:-.12em;left:-.04em;font-family:"Barlow Condensed",Arial,sans-serif;font-size:2.6em;line-height:1;color:var(--amber)}
+.p-q footer{display:grid;gap:.15rem;font-weight:600}
+.p-q footer span{font-weight:500;color:var(--mute)}
+.p-sample{display:inline-block;justify-self:start;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid #cfd3d8;padding:2px 8px}
+
+/* CTA band */
+.p-cta{position:relative;color:#fff;padding:clamp(80px,11cqw,150px) var(--px);overflow:hidden;background:var(--ink)}
+.p-cta>img{position:absolute;inset:0}
+.p-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,15,.92),rgba(10,12,15,.55))}
+.p-cta-in{position:relative;z-index:2;display:grid;gap:1.3rem;max-width:760px}
+.p-cta h2{font-size:clamp(46px,6.4cqw,96px)}
+.p-cta p{font-size:19px;color:rgba(255,255,255,.88);max-width:30em}
+.p-cta-row{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;margin-top:.6rem}
+.p-cta-row span{font-weight:600;font-size:18px}
+
+/* Footer */
+.p-foot{background:#0b0d10;color:#b3bbc4;padding:clamp(56px,7cqw,90px) var(--px) 28px;font-size:15px}
+.p-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(24px,4cqw,56px)}
+.p-foot h2{margin:0 0 .9rem;color:#fff;font-family:"Barlow Condensed",Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:16px}
+.p-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.p-foot a:hover{color:#fff}
+.p-foot .p-logo{color:#fff;margin-bottom:1rem}
+.p-foot-bottom{margin-top:clamp(36px,5cqw,64px);padding-top:22px;border-top:1px solid #20252c;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;font-size:14px}
+
+/* Floating call button (phones) */
+.p-fab-wrap{position:sticky;bottom:18px;height:0;z-index:25;display:none}
+.p-fab{position:absolute;right:18px;bottom:0;display:flex;align-items:center;gap:.5rem;background:var(--amber);color:var(--ink)!important;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:18px;letter-spacing:.05em;text-transform:uppercase;padding:13px 18px;border-radius:999px;box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
+.p-fab svg{width:18px;height:18px}
+.p-fab{transition:opacity .25s ease,transform .3s var(--ease-out)}
+.pro:not(.is-scrolled) .p-fab{opacity:0;transform:translateY(12px);pointer-events:none}
+
+/* Inner page hero */
+.p-phero{position:relative;min-height:440px;display:flex;align-items:flex-end;color:#fff;background:var(--ink);overflow:hidden}
+.p-phero>img{position:absolute;inset:0}
+.p-phero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,15,.9),rgba(10,12,15,.45)),linear-gradient(0deg,rgba(10,12,15,.6),rgba(10,12,15,0) 50%)}
+.p-phero-in{position:relative;z-index:2;padding:140px var(--px) 60px;display:grid;gap:.9rem;max-width:900px}
+.p-phero h1{font-size:clamp(50px,6.4cqw,96px)}
+.p-phero p{font-size:19px;color:rgba(255,255,255,.88);max-width:34em}
+
+/* About */
+.p-story{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5cqw,80px);padding:var(--py) var(--px);align-items:center}
+.p-story-txt{display:grid;gap:1.1rem}
+.p-story-txt h2{font-size:clamp(38px,4.4cqw,62px)}
+.p-story-txt p{color:var(--mute);font-size:18px}
+.p-story .ph{aspect-ratio:4/5;overflow:hidden}
+.p-team{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.6rem}
+.p-person{display:flex;gap:1rem;align-items:center;border:1px solid #dfe2e6;padding:1.1rem}
+.p-avatar{width:56px;height:56px;flex:none;display:grid;place-items:center;background:var(--ink);color:var(--amber);font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:22px}
+.p-person b{display:block;font-size:17px}
+.p-person span{color:var(--mute);font-size:15px}
+.p-creds{background:var(--ink);color:#fff;padding:var(--py) var(--px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(28px,5cqw,80px)}
+.p-creds h2{font-size:clamp(40px,5cqw,72px)}
+.p-creds dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.p-creds dl div{padding:1.3rem 0;border-top:1px solid var(--line-d);display:grid;gap:.35rem;padding-right:1rem}
+.p-creds dt{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.p-creds dd{margin:0;font-size:19px;font-weight:500}
+.p-expect{padding:var(--py) var(--px)}
+.p-expect h2{font-size:clamp(40px,5cqw,72px);margin-bottom:clamp(24px,3cqw,44px)}
+.p-expect-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.5rem;padding:1.6rem 0;border-top:1px solid #dfe2e6}
+.p-expect-row:last-child{border-bottom:1px solid #dfe2e6}
+.p-expect-row h3{font-size:30px}
+.p-expect-row p{color:var(--mute);font-size:18px}
+
+/* Services page */
+.p-svcs{padding:var(--py) var(--px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2cqw,28px)}
+.p-card{display:grid;grid-template-rows:auto 1fr;background:#fff;border:1px solid #dfe2e6;transition:border-color .25s ease,box-shadow .3s ease}
+.p-card:hover{border-color:#c4c9cf;box-shadow:0 22px 40px -28px rgba(16,19,23,.45)}
+.p-card .ph{aspect-ratio:4/3;overflow:hidden}
+.p-card .ph img{transition:transform .9s var(--ease-out)}
+.p-card:hover .ph img{transform:scale(1.05)}
+.p-card-in{padding:1.3rem;display:grid;gap:.7rem;align-content:start}
+.p-card h2{font-size:26px}
+.p-card p{color:var(--mute);font-size:15.5px}
+.p-card .p-link{font-size:16px;justify-self:start;margin-top:.3rem}
+
+/* Projects page */
+.p-projects{padding:var(--py) var(--px)}
+.p-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:clamp(24px,3cqw,40px)}
+.p-chip{font-weight:600!important;font-size:15px!important;padding:10px 18px!important;border:1.5px solid #cfd3d8!important;border-radius:999px;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.p-chip:hover{border-color:var(--ink)!important}
+.p-chip[aria-pressed="true"]{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important}
+.p-pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.8cqw,24px)}
+.p-pj{display:grid;gap:.7rem;text-align:left}
+.p-pj .ph{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--steel)}
+.p-pj .ph img{transition:transform .9s var(--ease-out)}
+.p-pj:hover .ph img{transform:scale(1.05)}
+.p-pj .ph::after{content:"";position:absolute;inset:0;background:rgba(16,19,23,0);transition:background-color .3s ease}
+.p-pj:hover .ph::after{background:rgba(16,19,23,.18)}
+.p-pj small{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);font-size:14px}
+.p-pj b{font-size:24px;display:block}
+.p-pj .note{font-size:13px;color:var(--mute)}
+
+/* Contact page */
+.p-contact{padding:var(--py) var(--px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,4cqw,64px);align-items:start}
+.p-form{border:1px solid #dfe2e6;padding:clamp(20px,3.4cqw,44px);display:grid;gap:1.4rem;background:#fff}
+.p-prog{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;counter-reset:pg}
+.p-prog li{counter-increment:pg;display:grid;gap:.5rem;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.p-prog li::before{content:"";height:4px;background:#e1e4e8;transition:background-color .3s ease}
+.p-prog li.is-on{color:var(--ink)}
+.p-prog li.is-on::before{background:var(--amber)}
+.p-step{border:0;margin:0;padding:0;display:grid;gap:1.1rem;min-width:0}
+.p-step legend{padding:0;margin-bottom:1rem;font-size:clamp(30px,3cqw,40px)}
+.p-types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.p-type{position:relative;display:flex;align-items:center;gap:.8rem;border:1.5px solid #cfd3d8;padding:14px 16px;cursor:pointer;font-weight:600;transition:border-color .2s ease,background-color .2s ease}
+.p-type input{position:absolute;opacity:0;pointer-events:none}
+.p-type i{flex:none;width:20px;height:20px;border:2px solid #9aa2ab;border-radius:50%;display:grid;place-items:center;transition:border-color .2s ease}
+.p-type i::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--amber);transform:scale(0);transition:transform .2s var(--ease-out)}
+.p-type:hover{border-color:var(--ink)}
+.p-type:has(input:checked){border-color:var(--ink);background:#fff8ea}
+.p-type:has(input:checked) i{border-color:var(--ink)}
+.p-type:has(input:checked) i::after{transform:scale(1)}
+.p-type:has(input:focus-visible){outline:3px solid var(--amber);outline-offset:2px}
+.p-row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.p-field{display:grid;gap:.4rem}
+.p-field label{font-weight:600;font-size:15px}
+.p-field input,.p-field select,.p-field textarea{width:100%;border:1.5px solid #c4c9cf;border-radius:2px;padding:.8rem .9rem;background:#fff;color:var(--ink);font-size:16px}
+.p-field textarea{min-height:110px;resize:vertical}
+.p-field input:focus,.p-field select:focus,.p-field textarea:focus{outline:3px solid rgba(245,166,35,.45);border-color:var(--ink)}
+.p-field [aria-invalid="true"]{border-color:#b42318}
+.p-hint{font-size:14px;color:var(--mute)}
+.p-fnav{display:flex;gap:.7rem;justify-content:space-between;flex-wrap:wrap}
+.p-fnav .sp{flex:1}
+.p-done{display:grid;gap:1rem;justify-items:start;padding:1rem 0}
+.p-done .ok{width:64px;height:64px;border-radius:50%;background:var(--amber);display:grid;place-items:center}
+.p-done .ok svg{width:30px;height:30px}
+.p-done h2{font-size:clamp(34px,3.4cqw,46px)}
+.p-done p{color:var(--mute);font-size:17px}
+.p-aside{display:grid;gap:1.4rem}
+.p-aside-card{background:var(--ink);color:#fff;padding:clamp(22px,3cqw,36px);display:grid;gap:1.3rem}
+.p-aside-card h2{font-size:30px}
+.p-aside-card dl{margin:0;display:grid;gap:1rem}
+.p-aside-card dt{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.p-aside-card dd{margin:.15rem 0 0;font-size:18px}
+.p-map{position:relative;aspect-ratio:4/3;background:linear-gradient(118deg,transparent 46%,#f3c46c 46% 50%,transparent 50%),linear-gradient(28deg,transparent 60%,#e9ecef 60% 62.5%,transparent 62.5%),repeating-linear-gradient(90deg,transparent 0 46px,#fff 46px 52px),repeating-linear-gradient(0deg,transparent 0 38px,#fff 38px 44px),#e2e5e0;border:1px solid #dfe2e6}
+.p-pin{position:absolute;left:48%;top:42%;width:30px;height:30px;border-radius:50% 50% 50% 0;background:var(--amber);border:6px solid var(--ink);transform:translate(-50%,-50%) rotate(-45deg);box-shadow:0 10px 18px -8px rgba(0,0,0,.5)}
+.p-map a{position:absolute;left:12px;bottom:12px;background:#fff;font-weight:600;font-size:14px;padding:8px 12px;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+
+/* Overlays (live beside the scroll area so they cover the preview window) */
+.ov{position:fixed;inset:0;z-index:50}
+/* Overlays sit outside .pro, so they need the brand tokens too */
+.ov{--ink:#101317;--amber:#f5a623;--amber-hi:#ffb83d;--mute-d:#aeb6bf}
+.p-menu-ov{background:#0b0d10;color:#fff;display:flex;flex-direction:column;gap:18px;padding:20px 24px 24px;font-family:"Barlow",Arial,sans-serif;overflow:hidden;isolation:isolate}
+.m-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.m-bg img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;transform:scale(1.2);animation:m-drift 16s ease-in-out infinite alternate}
+@keyframes m-drift{from{transform:scale(1.2) translate3d(-4%,1%,0)}to{transform:scale(1.2) translate3d(4%,-2%,0)}}
+.m-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,16,.72) 0%,rgba(11,13,16,.86) 42%,rgba(11,13,16,.96) 100%)}
+.m-grid{position:absolute;inset:-40px;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(245,166,35,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,.09) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(130% 75% at 100% 0%,#000 0%,transparent 72%);mask-image:radial-gradient(130% 75% at 100% 0%,#000 0%,transparent 72%);animation:m-grid 8s linear infinite}
+@keyframes m-grid{to{transform:translate3d(-36px,36px,0)}}
+.p-menu-top{display:flex;justify-content:space-between;align-items:center}
+.p-menu-top .p-logo{color:#fff}
+.p-menu-top .p-lt{display:block}
+.p-menu-links{display:grid;margin:auto 0}
+.p-menu-links a{display:grid;gap:3px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.09);color:#fff;text-decoration:none}
+.p-menu-links a:first-child{border-top:1px solid rgba(255,255,255,.09)}
+.ml-t{display:flex;align-items:center;gap:12px;font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:38px;line-height:1;text-transform:uppercase;transition:color .2s ease,transform .3s var(--ease-out)}
+.ml-t::after{content:"";width:24px;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out)}
+.ml-s{font-size:14px;color:var(--mute-d)}
+.p-menu-links a.on .ml-t{color:var(--amber)}
+.p-menu-links a.on .ml-t::after{transform:scaleX(1)}
+.p-menu-links a:active .ml-t{transform:translateX(6px)}
+.p-menu-foot{display:grid;gap:14px}
+.p-menu-foot .p-btn{width:100%;text-decoration:none}
+.m-call{display:flex;align-items:center;gap:12px}
+.m-ic{width:46px;height:46px;flex:none;border-radius:50%;background:rgba(245,166,35,.16);color:var(--amber);display:grid;place-items:center}
+.m-ic svg{width:20px;height:20px}
+.m-call b{display:block;font-size:19px;font-weight:600}
+.m-call small{font-size:13px;color:var(--mute-d)}
+.m-lic{margin:0;padding-top:12px;border-top:1px solid rgba(255,255,255,.09);font-size:13px;color:var(--mute-d)}
+.m-main{display:contents}
+.m-preview{display:none}
+@media (hover:hover) and (pointer:fine){
+  .p-menu-links a:hover .ml-t{transform:translateX(10px)}
+  .p-menu-links a:hover .ml-t::after{transform:scaleX(1)}
+}
+/* Computer layout of the menu (the preview window is the container) */
+@media (min-width: 821px){
+  .p-menu-ov{padding:22px clamp(32px,5cqw,84px) 24px;gap:20px}
+  .m-main{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5cqw,88px);align-items:center;flex:1 1 auto;min-height:0}
+  .p-menu-links{margin:0}
+  .p-menu-links a{padding:10px 0}
+  .ml-t{font-size:clamp(36px,3.9cqw,60px)}
+  .ml-s{font-size:14px}
+  .m-preview{display:block;position:relative;height:100%;min-height:280px;max-height:540px;overflow:hidden;background:#16191e}
+  .m-preview img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;transform:scale(1.07);transition:opacity .55s ease,transform 1.1s var(--ease-out)}
+  .m-preview img.is-active{opacity:1;transform:scale(1)}
+  .m-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,13,16,.75) 0%,rgba(11,13,16,0) 45%)}
+  .m-cap{position:absolute;z-index:2;left:24px;bottom:20px;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:600;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+  .p-menu-foot{display:flex;align-items:center;gap:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09)}
+  .p-menu-foot .p-btn{width:auto;flex:none}
+  .m-call{flex:none}
+  .m-lic{margin-left:auto;border-top:0;padding-top:0;text-align:right;min-width:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .m-bg img,.m-grid{animation:none}
+  .m-preview img{transition:opacity .3s ease;transform:none}
+}
+.ov-close{width:46px;height:46px;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.4);border-radius:2px;background:none;color:#fff;cursor:pointer}
+.ov-close svg{width:20px;height:20px}
+.lightbox{background:rgba(8,10,13,.95);display:grid;grid-template-rows:auto 1fr auto;padding:16px;color:#fff;font-family:"Barlow",Arial,sans-serif}
+.lb-top{display:flex;justify-content:flex-end}
+.lb-stage{position:relative;min-height:0}
+.lb-stage img{position:absolute;inset:0;margin:auto;width:auto;height:auto;max-width:calc(100% - 128px);max-height:100%;object-fit:contain;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.lb-cap{text-align:center;font-size:16px;padding:10px 0 4px}
+.lb-cap b{font-family:"Barlow Condensed",Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:22px;display:block}
+.lb-cap span{color:#aeb6bf;font-size:14px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:0;color:#fff;cursor:pointer;border-radius:2px}
+.lb-nav:hover{background:rgba(255,255,255,.2)}
+.lb-nav svg{width:22px;height:22px}
+.lb-prev{left:12px}.lb-next{right:12px}
+
+/* Container responsive rules for the Professional site */
+@container site (max-width: 1120px){
+  .p-phone{display:none}
+}
+@container site (max-width: 960px){
+  .p-nav a{font-size:14px}
+  .p-nav{gap:1.3rem}
+  .p-svcs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container site (max-width: 820px){
+  .p-nav,.p-hact .p-btn{display:none}
+  .p-burger{padding:0!important;width:46px}
+  .p-burger-label{display:none}
+  .p-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p-stat:nth-child(3){border-left:0}
+  .p-stat:nth-child(n+3){border-top:1px solid rgba(16,19,23,.16)}
+  .p-intro,.p-svc-body,.p-rev,.p-story,.p-creds,.p-contact{grid-template-columns:1fr}
+  .p-svc-media{min-height:0;aspect-ratio:16/10;order:-1}
+  .p-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p-pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p-foot-grid{grid-template-columns:1fr 1fr}
+  .p-fab-wrap{display:block}
+  .p-expect-row{grid-template-columns:1fr;gap:.5rem}
+}
+@container site (max-width: 560px){
+  .pro{font-size:16px}
+  .p-lt{display:none}
+  .p-hero-in{padding-bottom:120px}
+  .p-dots{gap:.7rem}
+  .p-dots button{font-size:12px;letter-spacing:.06em}
+  .p-ctas .p-btn{flex:1 1 100%}
+  .p-feat-grid{grid-template-columns:1fr;grid-auto-rows:240px}
+  .p-tile.big{grid-row:span 1}
+  .p-steps,.p-pgrid,.p-svcs,.p-team,.p-types,.p-row2,.p-creds dl,.p-foot-grid{grid-template-columns:1fr}
+  .p-stat b{font-size:40px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .p-slide img,.p-slide.is-active img{animation:none;transform:none}
+  .p-dots .is-active i::after{animation:none;transform:scaleX(1)}
+  .p-tile img,.p-card .ph img,.p-pj .ph img,.p-svc-media img{transition:opacity .3s ease}
+  .p-tile:hover img,.p-card:hover .ph img,.p-pj:hover .ph img{transform:none}
+  .p-btn:active,.e-btn:active{transform:none}
+}
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></g></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></g></symbol>
+</svg>
+<div class="app">
+<div class="site pro">
+
+                <header class="p-header">
+                  <a href="#" class="p-logo" data-go="home"><span class="p-mark">5MLA</span><span class="p-lt">Engineering<br>&amp; Construction</span></a>
+                  <nav class="p-nav" aria-label="Sample site">
+                    <a href="#" data-go="home" class="on">Home</a>
+                    <a href="#" data-go="about">About</a>
+                    <a href="#" data-go="services">Services</a>
+                    <a href="#" data-go="projects">Projects</a>
+                    <a href="#" data-go="contact">Contact</a>
+                    <span class="p-nav-bar" aria-hidden="true"></span>
+                  </nav>
+                  <div class="p-hact">
+                    <span class="p-phone"><svg><use href="#i-phone"/></svg>(818) 325-5414</span>
+                    <a href="#" class="p-btn" data-go="contact">Get an Estimate</a>
+                    <button type="button" class="p-burger" aria-label="Open menu" data-menu-open><b class="p-burger-label">Menu</b><span><i></i><i></i><i></i></span></button>
+                  </div>
+                </header>
+
+                <!-- ============ HOME ============ -->
+                <div class="p-page" data-page="home">
+                  <section class="p-hero">
+                    <figure class="p-slide is-active"><img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=2000&q=75" alt="Tower cranes above a high-rise under construction"></figure>
+                    <figure class="p-slide"><img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&fit=crop&w=2000&q=75" alt="Two engineers in hard hats reviewing a job site"></figure>
+                    <figure class="p-slide"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=2000&q=75" alt="Glass towers rising beside tower cranes"></figure>
+                    <span class="p-sentinel"></span>
+                    <div class="p-hero-in">
+                      <h1 class="d">We build the buildings Los Angeles runs on</h1>
+                      <p class="p-hero-sub">Commercial and multi-family construction, from ground-up builds to tenant improvements. Licensed, bonded and insured.</p>
+                      <div class="p-ctas">
+                        <a href="#" class="p-btn lg" data-go="contact">Get a Free Estimate <svg><use href="#i-arrow"/></svg></a>
+                        <a href="#" class="p-btn ghost lg" data-go="projects">See Our Work</a>
+                      </div>
+                    </div>
+                    <div class="p-dots" role="group" aria-label="Choose a photo">
+                      <button type="button" class="is-active" aria-pressed="true">Commercial<i></i></button>
+                      <button type="button" aria-pressed="false">On site<i></i></button>
+                      <button type="button" aria-pressed="false">High-rise<i></i></button>
+                    </div>
+                  </section>
+
+                  <section class="p-stats" aria-label="Credentials">
+                    <div class="p-stat"><b class="d" data-count="97">97</b><span>BuildZoom contractor score</span></div>
+                    <div class="p-stat"><b class="d" data-count="18" data-prefix="Top " data-suffix="%">Top 18%</b><span>of 336,931 California contractors</span></div>
+                    <div class="p-stat"><b class="d" data-count="2" data-prefix="$" data-suffix="M">$2M</b><span>Liability insurance coverage</span></div>
+                    <div class="p-stat"><b class="d">A + B</b><span>California license classes</span></div>
+                  </section>
+
+                  <section class="p-intro">
+                    <div class="p-intro-media">
+                      <div class="a"><img loading="lazy" src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&fit=crop&w=1000&q=70" alt="Engineers in safety vests pointing across a construction site"></div>
+                      <div class="b"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=70" alt="Hands sketching building plans on paper"></div>
+                    </div>
+                    <div class="p-intro-txt">
+                      <h2 class="d">One team from the first drawing to the final inspection</h2>
+                      <p>5MLA Engineering &amp; Construction is a full-service general contractor based in North Hills. We plan, permit and build commercial and multi-family projects across Los Angeles, and we manage every step until the final inspection.</p>
+                      <ul class="p-ticks">
+                        <li>California General Engineering (A) and General Building (B) licenses</li>
+                        <li>$25,000 contractor's bond and up to $2M liability coverage</li>
+                        <li>Workers' compensation insured</li>
+                      </ul>
+                      <a href="#" class="p-link" data-go="about">About 5MLA <svg><use href="#i-arrow"/></svg></a>
+                    </div>
+                  </section>
+
+                  <section class="p-svc">
+                    <div class="p-head-row"><h2 class="d">What we build</h2><a href="#" class="p-link light" data-go="services">All services <svg><use href="#i-arrow"/></svg></a></div>
+                    <div class="p-svc-body">
+                      <div class="p-svc-list">
+                        <button type="button" class="p-svc-item is-active" data-i="0" aria-pressed="true"><span class="d">Office buildings</span><small>New offices and interior buildouts for growing businesses.</small></button>
+                        <button type="button" class="p-svc-item" data-i="1" aria-pressed="false"><span class="d">Retail stores</span><small>Storefronts and shopping spaces, built to open on time.</small></button>
+                        <button type="button" class="p-svc-item" data-i="2" aria-pressed="false"><span class="d">Restaurants</span><small>Dining rooms and commercial kitchens built to code.</small></button>
+                        <button type="button" class="p-svc-item" data-i="3" aria-pressed="false"><span class="d">Multi-family housing</span><small>Medium and large apartment buildings, foundation to finish.</small></button>
+                        <button type="button" class="p-svc-item" data-i="4" aria-pressed="false"><span class="d">Industrial &amp; warehouse</span><small>Warehouses, distribution and industrial buildings.</small></button>
+                        <button type="button" class="p-svc-item" data-i="5" aria-pressed="false"><span class="d">Hotels</span><small>New hotels and hospitality renovations.</small></button>
+                        <button type="button" class="p-svc-item" data-i="6" aria-pressed="false"><span class="d">Healthcare facilities</span><small>Clinics and medical offices.</small></button>
+                      </div>
+                      <div class="p-svc-media">
+                        <img class="is-active" data-i="0" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=70" alt="Glass office towers seen from below">
+                        <img data-i="1" loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=70" alt="Finished retail store interior">
+                        <img data-i="2" loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=70" alt="Finished restaurant dining room">
+                        <img data-i="3" loading="lazy" src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=1400&q=70" alt="Wood-frame apartment building under construction">
+                        <img data-i="4" loading="lazy" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=70" alt="Large warehouse interior with racking">
+                        <img data-i="5" loading="lazy" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=70" alt="Hotel with palm trees and a pool at dusk">
+                        <img data-i="6" loading="lazy" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=70" alt="Bright medical clinic reception area">
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="p-feat">
+                    <div class="p-head-row"><h2 class="d">Recent work</h2><a href="#" class="p-link" data-go="projects">All projects <svg><use href="#i-arrow"/></svg></a></div>
+                    <div class="p-feat-grid">
+                      <a href="#" class="p-tile big" data-go="projects"><img loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=70" alt="Modern multi-story apartment building"><span class="p-tile-cap"><small>Multi-family</small><b class="d">Apartment residences</b></span></a>
+                      <a href="#" class="p-tile" data-go="projects"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=70" alt="Finished restaurant dining room"><span class="p-tile-cap"><small>Restaurant</small><b class="d">Dining room buildout</b></span></a>
+                      <a href="#" class="p-tile" data-go="projects"><img loading="lazy" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1000&q=70" alt="Long warehouse aisle with tall racking"><span class="p-tile-cap"><small>Industrial</small><b class="d">Distribution warehouse</b></span></a>
+                    </div>
+                  </section>
+
+                  <section class="p-proc">
+                    <h2 class="d">How a 5MLA project runs</h2>
+                    <ol class="p-steps">
+                      <li><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=70" alt="Hands sketching building plans"></div><span class="n d">01</span><h3 class="d">Plan &amp; price</h3><p>We review your drawings, walk the site and give you a clear, itemized estimate.</p></li>
+                      <li><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=800&q=70" alt="Excavator preparing a building site"></div><span class="n d">02</span><h3 class="d">Permits &amp; site work</h3><p>We handle permits and prepare the site, from grading to utilities.</p></li>
+                      <li><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=800&q=70" alt="Workers building a reinforced concrete wall"></div><span class="n d">03</span><h3 class="d">Build</h3><p>Our project manager runs the schedule, the crews and every inspection.</p></li>
+                      <li><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=70" alt="Crew walking a finished concrete slab"></div><span class="n d">04</span><h3 class="d">Hand over</h3><p>A final walkthrough, a finished punch list, and documents for your records.</p></li>
+                    </ol>
+                  </section>
+
+                  <section class="p-rev">
+                    <div class="p-rev-l">
+                      <h2 class="d">What clients say</h2>
+                      <div class="p-rev-nav">
+                        <button type="button" aria-label="Previous review" data-rev="-1"><svg><use href="#i-left"/></svg></button>
+                        <button type="button" aria-label="Next review" data-rev="1"><svg><use href="#i-arrow"/></svg></button>
+                      </div>
+                    </div>
+                    <div aria-live="polite">
+                      <blockquote class="p-q"><span class="p-sample">Sample review</span><p>They kept our tenant improvement on schedule and the site clean the whole way through.</p><footer>Property manager<span>Office building</span></footer></blockquote>
+                      <blockquote class="p-q" hidden><span class="p-sample">Sample review</span><p>A clear estimate, no surprises, and a project manager who always picked up the phone.</p><footer>Restaurant owner<span>Restaurant buildout</span></footer></blockquote>
+                      <blockquote class="p-q" hidden><span class="p-sample">Sample review</span><p>From permits to final inspection, 5MLA handled everything for our new building.</p><footer>Developer<span>Multi-family project</span></footer></blockquote>
+                    </div>
+                  </section>
+
+                  <section class="p-cta">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&w=1800&q=70" alt="">
+                    <div class="p-cta-in">
+                      <h2 class="d">Planning a project?</h2>
+                      <p>Tell us what you're building. We'll come back with next steps and a free, itemized estimate.</p>
+                      <div class="p-cta-row"><a href="#" class="p-btn lg" data-go="contact">Get a Free Estimate <svg><use href="#i-arrow"/></svg></a><span>or call (818) 325-5414</span></div>
+                    </div>
+                  </section>
+                </div>
+
+                <!-- ============ ABOUT ============ -->
+                <div class="p-page" data-page="about" hidden>
+                  <section class="p-phero">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=70" alt="Construction workers placing rebar on a building deck">
+                    <span class="p-sentinel"></span>
+                    <div class="p-phero-in"><h1 class="d">About 5MLA</h1><p>A full-service general contractor based in North Hills, building across Los Angeles.</p></div>
+                  </section>
+                  <section class="p-story">
+                    <div class="p-story-txt">
+                      <h2 class="d">From first plans to final inspection</h2>
+                      <p>5MLA Engineering &amp; Construction handles commercial projects of every kind: new buildings, renovations and tenant improvements for offices, stores, restaurants, apartments, warehouses and more.</p>
+                      <p>We hold California General Engineering (A) and General Building (B) licenses, so one company can look after both the site work and the building itself.</p>
+                      <div class="p-team">
+                        <div class="p-person"><span class="p-avatar">MS</span><div><b>Martin Studley</b><span>President</span></div></div>
+                        <div class="p-person"><span class="p-avatar">MS</span><div><b>Matthew Studley</b><span>Project Manager</span></div></div>
+                      </div>
+                    </div>
+                    <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=70" alt="Worker in a yellow hard hat installing a fixture"></div>
+                  </section>
+                  <section class="p-creds">
+                    <h2 class="d">Licensed, bonded &amp; insured</h2>
+                    <dl>
+                      <div><dt>California license</dt><dd>#759036, active</dd></div>
+                      <div><dt>Classifications</dt><dd>General Engineering (A), General Building (B)</dd></div>
+                      <div><dt>Contractor's bond</dt><dd>$25,000, Hudson Insurance Company</dd></div>
+                      <div><dt>Liability insurance</dt><dd>Up to $2,000,000</dd></div>
+                      <div><dt>Workers' compensation</dt><dd>SiriusPoint America Insurance Company</dd></div>
+                      <div><dt>BuildZoom score</dt><dd>97, top 18% in California</dd></div>
+                    </dl>
+                  </section>
+                  <section class="p-expect">
+                    <h2 class="d">What you can expect</h2>
+                    <div class="p-expect-row"><h3 class="d">Clear pricing</h3><p>An itemized estimate before work starts, so you know what you're paying for.</p></div>
+                    <div class="p-expect-row"><h3 class="d">One point of contact</h3><p>A dedicated project manager who keeps you updated from start to finish.</p></div>
+                    <div class="p-expect-row"><h3 class="d">Work done to code</h3><p>Permits, inspections and paperwork handled properly, every time.</p></div>
+                  </section>
+                </div>
+
+                <!-- ============ SERVICES ============ -->
+                <div class="p-page" data-page="services" hidden>
+                  <section class="p-phero">
+                    <img src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&fit=crop&w=2000&q=70" alt="Tower cranes beside a building wrapped in scaffolding">
+                    <span class="p-sentinel"></span>
+                    <div class="p-phero-in"><h1 class="d">Services</h1><p>New construction, renovations and tenant improvements for every kind of commercial property.</p></div>
+                  </section>
+                  <section class="p-svcs">
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=70" alt="Glass office towers"></div><div class="p-card-in"><h2 class="d">Office buildings</h2><p>Ground-up offices and interior buildouts for new tenants.</p><a href="#" class="p-link" data-go="contact" data-type="Office">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=70" alt="Retail store interior"></div><div class="p-card-in"><h2 class="d">Retail stores</h2><p>Storefronts and shopping spaces, finished and ready to open.</p><a href="#" class="p-link" data-go="contact" data-type="Retail or restaurant">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=70" alt="Restaurant dining room"></div><div class="p-card-in"><h2 class="d">Restaurants</h2><p>Dining rooms and commercial kitchens built to health and building code.</p><a href="#" class="p-link" data-go="contact" data-type="Retail or restaurant">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700&q=70" alt="Apartment building"></div><div class="p-card-in"><h2 class="d">Multi-family</h2><p>Medium and large apartment buildings, from foundation to finish.</p><a href="#" class="p-link" data-go="contact" data-type="Multi-family">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=700&q=70" alt="Warehouse aisle"></div><div class="p-card-in"><h2 class="d">Industrial &amp; warehouse</h2><p>Warehouses, distribution centers and industrial buildings.</p><a href="#" class="p-link" data-go="contact" data-type="Industrial or warehouse">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=700&q=70" alt="Hotel at dusk"></div><div class="p-card-in"><h2 class="d">Hotels</h2><p>New hotels and hospitality renovations.</p><a href="#" class="p-link" data-go="contact" data-type="Hotel">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=700&q=70" alt="Clinic reception"></div><div class="p-card-in"><h2 class="d">Healthcare</h2><p>Clinics, medical offices and healthcare buildings.</p><a href="#" class="p-link" data-go="contact" data-type="Healthcare">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                    <article class="p-card"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=70" alt="Office corridor after renovation"></div><div class="p-card-in"><h2 class="d">Tenant improvements</h2><p>Updating existing buildings and preparing spaces for new tenants.</p><a href="#" class="p-link" data-go="contact" data-type="Renovation or tenant improvement">Get an estimate <svg><use href="#i-arrow"/></svg></a></div></article>
+                  </section>
+                </div>
+
+                <!-- ============ PROJECTS ============ -->
+                <div class="p-page" data-page="projects" hidden>
+                  <section class="p-phero">
+                    <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=2000&q=70" alt="Modern commercial building facade against a blue sky">
+                    <span class="p-sentinel"></span>
+                    <div class="p-phero-in"><h1 class="d">Our projects</h1><p>Finished work, sorted by the type of building. Click any photo to see it larger.</p></div>
+                  </section>
+                  <section class="p-projects">
+                    <div class="p-chips" role="group" aria-label="Filter projects">
+                      <button type="button" class="p-chip" data-f="all" aria-pressed="true">All projects</button>
+                      <button type="button" class="p-chip" data-f="office" aria-pressed="false">Office</button>
+                      <button type="button" class="p-chip" data-f="retail" aria-pressed="false">Retail &amp; restaurant</button>
+                      <button type="button" class="p-chip" data-f="multi" aria-pressed="false">Multi-family</button>
+                      <button type="button" class="p-chip" data-f="industrial" aria-pressed="false">Industrial</button>
+                      <button type="button" class="p-chip" data-f="hosp" aria-pressed="false">Hotel &amp; healthcare</button>
+                    </div>
+                    <div class="p-pgrid">
+                      <button type="button" class="p-pj" data-cat="multi" data-title="Apartment residences" data-type="Multi-family" data-full="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70" alt="Modern multi-story apartment building"></span><span><small>Multi-family</small><b class="d">Apartment residences</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="retail" data-title="Dining room buildout" data-type="Restaurant" data-full="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=70" alt="Finished restaurant dining room"></span><span><small>Restaurant</small><b class="d">Dining room buildout</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="office" data-title="Office tower" data-type="Office" data-full="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=70" alt="Glass office towers seen from below"></span><span><small>Office</small><b class="d">Office tower</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="industrial" data-title="Distribution warehouse" data-type="Industrial" data-full="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=70" alt="Long warehouse aisle with tall racking"></span><span><small>Industrial</small><b class="d">Distribution warehouse</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="retail" data-title="Retail store interior" data-type="Retail" data-full="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70" alt="Finished retail store interior"></span><span><small>Retail</small><b class="d">Retail store interior</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="multi" data-title="Wood-frame apartments" data-type="Multi-family" data-full="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=800&q=70" alt="Wood-frame apartment building under construction"></span><span><small>Multi-family</small><b class="d">Wood-frame apartments</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="hosp" data-title="Hotel and pool deck" data-type="Hotel" data-full="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=70" alt="Hotel with palm trees and a pool at dusk"></span><span><small>Hotel</small><b class="d">Hotel and pool deck</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="industrial" data-title="Distribution center" data-type="Industrial" data-full="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=70" alt="Large warehouse interior with racking"></span><span><small>Industrial</small><b class="d">Distribution center</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="hosp" data-title="Medical clinic" data-type="Healthcare" data-full="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=70" alt="Bright medical clinic reception area"></span><span><small>Healthcare</small><b class="d">Medical clinic</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="office" data-title="Office tenant improvement" data-type="Office" data-full="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70" alt="Renovated office corridor"></span><span><small>Office</small><b class="d">Office tenant improvement</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="office" data-title="Commercial facade" data-type="Office" data-full="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=800&q=70" alt="Modern commercial building facade"></span><span><small>Office</small><b class="d">Commercial facade</b><span class="note">Sample photo</span></span></button>
+                      <button type="button" class="p-pj" data-cat="multi" data-title="High-rise residences" data-type="Multi-family" data-full="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1800&q=80"><span class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=70" alt="Glass towers rising beside tower cranes"></span><span><small>Multi-family</small><b class="d">High-rise residences</b><span class="note">Sample photo</span></span></button>
+                    </div>
+                  </section>
+                </div>
+
+                <!-- ============ CONTACT ============ -->
+                <div class="p-page" data-page="contact" hidden>
+                  <section class="p-phero">
+                    <img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&fit=crop&w=2000&q=70" alt="Two engineers reviewing a job site">
+                    <span class="p-sentinel"></span>
+                    <div class="p-phero-in"><h1 class="d">Request a free estimate</h1><p>Three quick steps. We'll get back to you within one business day.</p></div>
+                  </section>
+                  <section class="p-contact">
+                    <form class="p-form" novalidate>
+                      <ol class="p-prog" aria-label="Form progress"><li class="is-on">Project</li><li>Details</li><li>Contact</li></ol>
+
+                      <fieldset class="p-step" data-step="0">
+                        <legend class="d">What are you building?</legend>
+                        <div class="p-types">
+                          <label class="p-type"><input type="radio" name="ptype" value="Office"><i></i>Office</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Retail or restaurant"><i></i>Retail or restaurant</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Multi-family"><i></i>Multi-family</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Industrial or warehouse"><i></i>Industrial or warehouse</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Hotel"><i></i>Hotel</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Healthcare"><i></i>Healthcare</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Renovation or tenant improvement"><i></i>Renovation or tenant improvement</label>
+                          <label class="p-type"><input type="radio" name="ptype" value="Something else"><i></i>Something else</label>
+                        </div>
+                        <p class="f-err" data-err="ptype" hidden></p>
+                      </fieldset>
+
+                      <fieldset class="p-step" data-step="1" hidden>
+                        <legend class="d">Tell us about the project</legend>
+                        <div class="p-row2">
+                          <div class="p-field"><label for="pro-size">Approximate size</label><select id="pro-size" name="size"><option value="">Choose one</option><option>Under 5,000 sq ft</option><option>5,000 to 20,000 sq ft</option><option>20,000 to 50,000 sq ft</option><option>Over 50,000 sq ft</option><option>Not sure yet</option></select></div>
+                          <div class="p-field"><label for="pro-time">When would you like to start?</label><select id="pro-time" name="time"><option value="">Choose one</option><option>As soon as possible</option><option>In 1 to 3 months</option><option>In 3 to 6 months</option><option>In 6 months or more</option></select></div>
+                        </div>
+                        <div class="p-field"><label for="pro-loc">Project city or address</label><input id="pro-loc" name="loc" aria-describedby="pro-loc-err"><p class="f-err" id="pro-loc-err" hidden></p></div>
+                        <div class="p-field"><label for="pro-desc">Anything else we should know? <span class="p-hint">(optional)</span></label><textarea id="pro-desc" name="desc"></textarea></div>
+                      </fieldset>
+
+                      <fieldset class="p-step" data-step="2" hidden>
+                        <legend class="d">How can we reach you?</legend>
+                        <div class="p-field"><label for="pro-name">Your name</label><input id="pro-name" name="name" autocomplete="name" aria-describedby="pro-name-err"><p class="f-err" id="pro-name-err" hidden></p></div>
+                        <div class="p-row2">
+                          <div class="p-field"><label for="pro-phone">Phone</label><input id="pro-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="pro-reach-err"></div>
+                          <div class="p-field"><label for="pro-email">Email</label><input id="pro-email" name="email" type="email" autocomplete="email" aria-describedby="pro-reach-err"></div>
+                        </div>
+                        <p class="p-hint">A phone number or an email is enough.</p>
+                        <p class="f-err" id="pro-reach-err" hidden></p>
+                      </fieldset>
+
+                      <div class="p-fnav">
+                        <button type="button" class="p-btn line" data-back hidden><svg><use href="#i-left"/></svg>Back</button>
+                        <span class="sp"></span>
+                        <button type="button" class="p-btn" data-next>Next <svg><use href="#i-arrow"/></svg></button>
+                        <button type="submit" class="p-btn" data-submit hidden>Send Request</button>
+                      </div>
+
+                      <div class="p-done" hidden role="status">
+                        <span class="ok"><svg><use href="#i-check"/></svg></span>
+                        <h2 class="d" data-done-title>Thanks. Your request is in.</h2>
+                        <p>We'll review your project and get back to you within one business day.</p>
+                        <p class="p-hint">This is a demo, so nothing was actually sent.</p>
+                        <button type="button" class="p-btn line" data-reset>Start a new request</button>
+                      </div>
+                    </form>
+
+                    <aside class="p-aside">
+                      <div class="p-aside-card">
+                        <h2 class="d">Talk to us directly</h2>
+                        <dl>
+                          <div><dt>Phone</dt><dd>(818) 325-5414</dd></div>
+                          <div><dt>Office</dt><dd>16760 Schoenborn St<br>North Hills, CA 91343</dd></div>
+                          <div><dt>License</dt><dd>CA #759036</dd></div>
+                        </dl>
+                      </div>
+                      <div class="p-map"><span class="p-pin"></span><a href="https://www.google.com/maps/search/?api=1&amp;query=16760+Schoenborn+St+North+Hills+CA+91343" target="_blank" rel="noopener" data-ext>Open in Google Maps</a></div>
+                    </aside>
+                  </section>
+                </div>
+
+                <footer class="p-foot">
+                  <div class="p-foot-grid">
+                    <div>
+                      <a href="#" class="p-logo" data-go="home"><span class="p-mark">5MLA</span><span class="p-lt">Engineering<br>&amp; Construction</span></a>
+                      <p>Commercial and multi-family general contractor serving Los Angeles.</p>
+                    </div>
+                    <div><h2>Company</h2><ul><li><a href="#" data-go="about">About</a></li><li><a href="#" data-go="services">Services</a></li><li><a href="#" data-go="projects">Projects</a></li><li><a href="#" data-go="contact">Free estimate</a></li></ul></div>
+                    <div><h2>Contact</h2><ul><li>(818) 325-5414</li><li>16760 Schoenborn St</li><li>North Hills, CA 91343</li></ul></div>
+                    <div><h2>Licensed &amp; insured</h2><ul><li>CA License #759036</li><li>Classes A and B</li><li>Bonded and insured</li></ul></div>
+                  </div>
+                  <div class="p-foot-bottom"><span>&copy; 2026 5MLA Engineering &amp; Construction</span><span>Website by ARC Solutions and Technology</span></div>
+                </footer>
+
+                <div class="p-fab-wrap"><a href="#" class="p-fab"><svg><use href="#i-phone"/></svg>Call</a></div>
+              </div>
+</div>
+<div class="p-wipe" data-wipe hidden aria-hidden="true"><div class="w-amber"></div><div class="w-dark"><span class="w-mark">5MLA</span><span class="w-label">Projects</span></div></div>
+<div class="ov p-menu-ov" data-menu hidden role="dialog" aria-modal="true" aria-label="Menu">
+              <div class="m-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="" loading="lazy"></div>
+              <div class="m-grid" aria-hidden="true"></div>
+              <div class="p-menu-top"><span class="p-logo"><span class="p-mark">5MLA</span><span class="p-lt">Engineering<br>&amp; Construction</span></span><button type="button" class="ov-close" aria-label="Close menu" data-menu-close><svg><use href="#i-close"/></svg></button></div>
+              <div class="m-main">
+              <nav class="p-menu-links" aria-label="Sample site menu">
+                <a href="#" data-go="home" class="on"><span class="ml-t">Home</span><span class="ml-s">Start here</span></a>
+                <a href="#" data-go="about"><span class="ml-t">About</span><span class="ml-s">Our story and licenses</span></a>
+                <a href="#" data-go="services"><span class="ml-t">Services</span><span class="ml-s">What we build</span></a>
+                <a href="#" data-go="projects"><span class="ml-t">Projects</span><span class="ml-s">Recent work</span></a>
+                <a href="#" data-go="contact"><span class="ml-t">Contact</span><span class="ml-s">Request a free estimate</span></a>
+              </nav>
+              <div class="m-preview" aria-hidden="true">
+                <img data-for="home" class="is-active" loading="lazy" src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&amp;fit=crop&amp;w=1100&amp;q=70" alt="">
+                <img data-for="about" loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=1100&amp;q=70" alt="">
+                <img data-for="services" loading="lazy" src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&amp;fit=crop&amp;w=1100&amp;q=70" alt="">
+                <img data-for="projects" loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1100&amp;q=70" alt="">
+                <img data-for="contact" loading="lazy" src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?auto=format&amp;fit=crop&amp;w=1100&amp;q=70" alt="">
+                <span class="m-cap">Start here</span>
+              </div>
+              </div>
+              <div class="p-menu-foot">
+                <a href="#" class="p-btn lg" data-go="contact">Get a Free Estimate <svg><use href="#i-arrow"/></svg></a>
+                <div class="m-call"><span class="m-ic"><svg><use href="#i-phone"/></svg></span><span><b>(818) 325-5414</b><small>Call the office</small></span></div>
+                <p class="m-lic">CA License #759036. Licensed, bonded and insured.</p>
+              </div>
+            </div>
+<div class="ov lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Project photo">
+              <div class="lb-top"><button type="button" class="ov-close" aria-label="Close photo" data-lb-close><svg><use href="#i-close"/></svg></button></div>
+              <div class="lb-stage"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Modern multi-story apartment building" loading="lazy" data-lb-img></div>
+              <p class="lb-cap"><b data-lb-title></b><span data-lb-type></span></p>
+              <button type="button" class="lb-nav lb-prev" aria-label="Previous photo" data-lb="-1"><svg><use href="#i-left"/></svg></button>
+              <button type="button" class="lb-nav lb-next" aria-label="Next photo" data-lb="1"><svg><use href="#i-arrow"/></svg></button>
+            </div>
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const EASE = 'cubic-bezier(0.23, 1, 0.32, 1)';
+  const EASE_IO = 'cubic-bezier(0.77, 0, 0.175, 1)';
+  const fadeIn = (el, y = 0, d = 260) => {
+    if (reduce || !el.animate) return;
+    el.animate([{ opacity: 0, transform: `translateY(${y}px)` }, { opacity: 1, transform: 'none' }], { duration: d, easing: EASE });
+  };
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  const pro = $('.site.pro');
+  const header = $('.p-header', pro);
+  const pages = $$('.p-page', pro);
+  const menu = $('[data-menu]');
+  const lightbox = $('[data-lightbox]');
+
+  document.addEventListener('click', (e) => { if (e.target.closest('a[href="#"]')) e.preventDefault(); });
+
+  /* ---------- Header: solid once the hero photo scrolls away ---------- */
+  let current = 'home', busy = false, queued = null, queuedOpts = {};
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => { en.target.dataset.vis = en.isIntersecting ? '1' : '0'; });
+    updateHeader();
+  }, { threshold: 0 });
+  $$('.p-sentinel', pro).forEach((s) => io.observe(s));
+  function updateHeader() {
+    if (busy) { header.classList.add('is-solid'); return; }
+    const page = pages.find((p) => !p.hidden);
+    const s = page && $('.p-sentinel', page);
+    const scrolled = !(s && s.dataset.vis === '1');
+    header.classList.toggle('is-solid', scrolled);
+    pro.classList.toggle('is-scrolled', scrolled);
+  }
+
+  /* ---------- Page routing with a branded wipe ---------- */
+  const wipe = $('[data-wipe]');
+  const wAmber = $('.w-amber', wipe), wDark = $('.w-dark', wipe);
+  const wMark = $('.w-mark', wipe), wLabel = $('.w-label', wipe);
+  const navBar = $('.p-nav-bar', pro);
+  const LABEL = { home: 'Home', about: 'About 5MLA', services: 'Services', projects: 'Projects', contact: 'Free estimate' };
+  const COVER = [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)' }];
+  const UNCOVER = [{ clipPath: 'inset(0 0 0 0%)' }, { clipPath: 'inset(0 0 0 100%)' }];
+
+  function moveNavBar(name, instant = false) {
+    const a = $(`.p-nav a[data-go="${name}"]`, pro);
+    if (!a || !navBar || !a.offsetWidth) return;
+    if (instant) navBar.style.transition = 'none';
+    navBar.style.transform = `translateX(${a.offsetLeft}px) scaleX(${a.offsetWidth / 100})`;
+    if (instant) { navBar.getBoundingClientRect(); navBar.style.transition = ''; }
+  }
+  moveNavBar('home', true);
+  if ('ResizeObserver' in window) new ResizeObserver(() => moveNavBar(queued || current, true)).observe($('.p-nav', pro));
+  if (document.fonts) document.fonts.ready.then(() => moveNavBar(current, true));
+
+  // Tell the proposal page (when embedded) which page is showing.
+  function announce(name, updateHash = true) {
+    if (updateHash) {
+      try { history.replaceState(null, '', name === 'home' ? location.pathname + location.search : '#' + name); } catch (err) { /* file:// may refuse */ }
+    }
+    if (window.parent !== window) window.parent.postMessage({ source: '5mla-mockup', page: name }, '*');
+  }
+
+  function swap(name, opts = {}, focus = true) {
+    const page = pages.find((p) => p.dataset.page === name);
+    pages.forEach((p) => { p.hidden = p !== page; });
+    window.scrollTo(0, 0);
+    $$('[data-go]').forEach((a) => a.classList.toggle('on', a.dataset.go === name && !a.classList.contains('p-btn') && !a.classList.contains('p-logo')));
+    if (opts.type) presetType(opts.type);
+    current = name;
+    announce(name);
+    const h1 = $('h1', page);
+    if (h1 && focus) { h1.tabIndex = -1; h1.focus({ preventScroll: true }); }
+    return page;
+  }
+
+  function intro(page, delay = 0) {
+    const hero = $('.p-hero, .p-phero', page);
+    if (!hero || reduce) return;
+    const img = $(':scope > img', hero);
+    if (img) img.animate([{ transform: 'scale(1.14)' }, { transform: 'scale(1)' }], { duration: 1500, delay, easing: EASE, fill: 'backwards' });
+    $$('.p-hero-in > *, .p-phero-in > *', hero).forEach((el, i) => {
+      const title = el.tagName === 'H1';
+      el.animate(title
+        ? [{ clipPath: 'inset(0 0 100% 0)', transform: 'translateY(40px)' }, { clipPath: 'inset(0 0 0% 0)', transform: 'none' }]
+        : [{ opacity: 0, transform: 'translateY(22px)' }, { opacity: 1, transform: 'none' }],
+        { duration: title ? 780 : 620, delay: delay + i * 90, easing: EASE, fill: 'backwards' });
+    });
+    const dots = $('.p-dots', hero);
+    if (dots) dots.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: delay + 420, fill: 'backwards' });
+  }
+
+  function hideMenu() {
+    if (menu.hidden) return;
+    if (reduce) { menu.hidden = true; return; }
+    const a = menu.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 200, easing: 'ease', fill: 'forwards' });
+    a.finished.then(() => { menu.hidden = true; a.cancel(); });
+  }
+
+  async function run(name, opts) {
+    busy = true;
+    moveNavBar(name);
+    updateHeader();
+    hideMenu();
+    wLabel.textContent = LABEL[name];
+    wipe.hidden = false;
+    wAmber.animate(COVER, { duration: 360, easing: EASE_IO, fill: 'forwards' });
+    const coverDark = wDark.animate(COVER, { duration: 360, delay: 70, easing: EASE_IO, fill: 'forwards' });
+    const words = [wMark, wLabel].map((el, i) => el.animate(
+      [{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 320, delay: 230 + i * 50, easing: EASE, fill: 'both' }));
+    await Promise.all([coverDark.finished, ...words.map((a) => a.finished)]);
+
+    const dest = queued || name;
+    const destOpts = queued ? queuedOpts : opts;
+    queued = null;
+    wLabel.textContent = LABEL[dest];
+    const page = swap(dest, destOpts);
+    await wait(110);
+
+    [wMark, wLabel].forEach((el) => el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160, easing: 'ease', fill: 'forwards' }));
+    wDark.animate(UNCOVER, { duration: 460, easing: EASE_IO, fill: 'forwards' });
+    const uncoverAmber = wAmber.animate(UNCOVER, { duration: 460, delay: 80, easing: EASE_IO, fill: 'forwards' });
+    intro(page, 180);
+    await uncoverAmber.finished;
+
+    wipe.hidden = true;
+    wipe.getAnimations({ subtree: true }).forEach((a) => a.cancel());
+    busy = false;
+    updateHeader();
+    if (queued && queued !== current) {
+      const next = queued, nextOpts = queuedOpts;
+      queued = null;
+      run(next, nextOpts);
+    } else {
+      queued = null;
+      moveNavBar(current);
+    }
+  }
+
+  function go(name, opts = {}) {
+    if (!pages.some((p) => p.dataset.page === name)) return;
+    if (busy) { queued = name; queuedOpts = opts; wLabel.textContent = LABEL[name]; moveNavBar(name); return; }
+    if (name === current) {
+      hideMenu();
+      if (opts.type) presetType(opts.type);
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      return;
+    }
+    if (reduce) {
+      hideMenu();
+      swap(name, opts);
+      moveNavBar(name, true);
+      updateHeader();
+      return;
+    }
+    run(name, opts);
+  }
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-go]');
+    if (!link) return;
+    e.preventDefault();
+    go(link.dataset.go, { type: link.dataset.type });
+  });
+
+  /* ---------- Full-screen menu ---------- */
+  let menuOpener = null, menuClosing = false;
+  const previewImgs = $$('.m-preview img', menu);
+  const previewCap = $('.m-cap', menu);
+  function menuPreview(name) {
+    previewImgs.forEach((im) => im.classList.toggle('is-active', im.dataset.for === name));
+    const sub = $(`.p-menu-links a[data-go="${name}"] .ml-s`, menu);
+    if (previewCap && sub) previewCap.textContent = sub.textContent;
+  }
+  $$('.p-menu-links a', menu).forEach((a) => {
+    a.addEventListener('focus', () => menuPreview(a.dataset.go));
+    if (canHover) a.addEventListener('mouseenter', () => menuPreview(a.dataset.go));
+  });
+  function openMenu() {
+    menuOpener = document.activeElement;
+    menuClosing = false;
+    menu.getAnimations().forEach((a) => a.cancel());
+    menu.hidden = false;
+    $('[data-menu-close]', menu).focus({ preventScroll: true });
+    menuPreview(current);
+    if (reduce) return;
+    const pvw = $('.m-preview', menu);
+    if (pvw && pvw.offsetParent) pvw.animate([{ clipPath: 'inset(0 0 0 100%)' }, { clipPath: 'inset(0 0 0 0%)' }], { duration: 760, delay: 260, easing: EASE_IO, fill: 'backwards' });
+    menu.animate([{ clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)' }], { duration: 520, easing: EASE_IO });
+    const parts = [$('.p-menu-top', menu), ...$$('.p-menu-links a', menu), $('.p-menu-foot', menu)];
+    parts.forEach((el, i) => el.animate(
+      [{ opacity: 0, transform: 'translateY(26px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 560, delay: 200 + i * 55, easing: EASE, fill: 'backwards' }));
+  }
+  function closeMenu(restore = true) {
+    if (menu.hidden || menuClosing) return;
+    const done = () => { menu.hidden = true; menuClosing = false; if (restore && menuOpener) menuOpener.focus({ preventScroll: true }); };
+    if (reduce) return done();
+    menuClosing = true;
+    const a = menu.animate([{ clipPath: 'inset(0 0 0% 0)' }, { clipPath: 'inset(0 0 100% 0)' }], { duration: 340, easing: EASE_IO, fill: 'forwards' });
+    a.finished.then(() => { done(); a.cancel(); });
+  }
+  $('[data-menu-open]', pro).addEventListener('click', openMenu);
+  $('[data-menu-close]', menu).addEventListener('click', () => closeMenu());
+
+  /* ---------- Hero slideshow ---------- */
+  const slides = $$('.p-slide', pro);
+  const dots = $$('.p-dots button', pro);
+  let slide = 0, timer = null;
+  function setSlide(i) {
+    slide = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === slide));
+    dots.forEach((d, k) => { d.classList.toggle('is-active', k === slide); d.setAttribute('aria-pressed', String(k === slide)); });
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (!reduce) timer = setTimeout(() => setSlide(slide + 1), 6500);
+  }
+  dots.forEach((d, k) => d.addEventListener('click', () => setSlide(k)));
+  schedule();
+
+  /* ---------- Counting numbers ---------- */
+  const counters = $$('[data-count]', pro);
+  const fmt = (el, v) => (el.dataset.prefix || '') + v + (el.dataset.suffix || '');
+  if (!reduce) counters.forEach((el) => { el.textContent = fmt(el, 0); });
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      cio.unobserve(en.target);
+      const el = en.target, end = Number(el.dataset.count);
+      if (reduce) { el.textContent = fmt(el, end); return; }
+      const t0 = performance.now(), dur = 1400;
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        el.textContent = fmt(el, Math.round(end * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach((el) => cio.observe(el));
+
+  /* ---------- Services showcase ---------- */
+  const svcItems = $$('.p-svc-item', pro);
+  const svcImgs = $$('.p-svc-media img', pro);
+  const pickSvc = (btn) => {
+    svcItems.forEach((b) => { const on = b === btn; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', String(on)); });
+    svcImgs.forEach((im) => im.classList.toggle('is-active', im.dataset.i === btn.dataset.i));
+  };
+  svcItems.forEach((b) => {
+    b.addEventListener('click', () => pickSvc(b));
+    b.addEventListener('focus', () => pickSvc(b));
+    if (canHover) b.addEventListener('mouseenter', () => pickSvc(b));
+  });
+
+  /* ---------- Reviews ---------- */
+  const quotes = $$('.p-q', pro);
+  let q = 0;
+  $$('[data-rev]', pro).forEach((b) => b.addEventListener('click', () => {
+    q = (q + Number(b.dataset.rev) + quotes.length) % quotes.length;
+    quotes.forEach((el, k) => { el.hidden = k !== q; });
+    fadeIn(quotes[q], 10, 320);
+  }));
+
+  /* ---------- Project filters + photo viewer ---------- */
+  const chips = $$('.p-chip', pro);
+  const items = $$('.p-pj', pro);
+  chips.forEach((c) => c.addEventListener('click', () => {
+    chips.forEach((x) => x.setAttribute('aria-pressed', String(x === c)));
+    const f = c.dataset.f;
+    items.forEach((it) => {
+      const show = f === 'all' || it.dataset.cat === f;
+      const was = !it.hidden;
+      it.hidden = !show;
+      if (show && !was && !reduce) it.animate([{ opacity: 0, transform: 'scale(.97)' }, { opacity: 1, transform: 'none' }], { duration: 280, easing: EASE });
+    });
+  }));
+  let lbList = [], lbIndex = 0, lbOpener = null;
+  const lbImg = $('[data-lb-img]', lightbox), lbTitle = $('[data-lb-title]', lightbox), lbType = $('[data-lb-type]', lightbox);
+  function renderLb() {
+    const it = lbList[lbIndex];
+    lbImg.src = it.dataset.full;
+    lbImg.alt = $('img', it).alt;
+    lbTitle.textContent = it.dataset.title;
+    lbType.textContent = it.dataset.type + ', sample photo';
+    fadeIn(lbImg, 0, 240);
+  }
+  function openLb(item) {
+    lbOpener = item;
+    lbList = items.filter((i) => !i.hidden);
+    lbIndex = lbList.indexOf(item);
+    lightbox.hidden = false;
+    renderLb();
+    $('[data-lb-close]', lightbox).focus();
+  }
+  function closeLb() {
+    if (lightbox.hidden) return;
+    lightbox.hidden = true;
+    if (lbOpener) lbOpener.focus();
+  }
+  const stepLb = (d) => { lbIndex = (lbIndex + d + lbList.length) % lbList.length; renderLb(); };
+  items.forEach((it) => it.addEventListener('click', () => openLb(it)));
+  $('[data-lb-close]', lightbox).addEventListener('click', closeLb);
+  $$('[data-lb]', lightbox).forEach((b) => b.addEventListener('click', () => stepLb(Number(b.dataset.lb))));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox || e.target.classList.contains('lb-stage')) closeLb(); });
+
+  /* ---------- Estimate form ---------- */
+  const setErr = (input, errEl, msg) => {
+    if (input) input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (errEl) { errEl.textContent = msg || ''; errEl.hidden = !msg; }
+  };
+  const looksLikeEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const looksLikePhone = (v) => v.replace(/\D/g, '').length >= 10;
+  const form = $('.p-form', pro);
+  const steps = $$('.p-step', form);
+  const prog = $$('.p-prog li', form);
+  const btnBack = $('[data-back]', form), btnNext = $('[data-next]', form), btnSubmit = $('[data-submit]', form);
+  const done = $('.p-done', form);
+  let step = 0;
+  function showStep(n, focus = true) {
+    step = n;
+    steps.forEach((s, k) => { s.hidden = k !== n; });
+    prog.forEach((p, k) => p.classList.toggle('is-on', k <= n));
+    btnBack.hidden = n === 0;
+    btnNext.hidden = n === steps.length - 1;
+    btnSubmit.hidden = n !== steps.length - 1;
+    fadeIn(steps[n], 8, 280);
+    if (focus) { const f = $('input, select, textarea', steps[n]); if (f) f.focus({ preventScroll: true }); }
+  }
+  function validate(n) {
+    if (n === 0) {
+      const ok = !!$('input[name="ptype"]:checked', form);
+      setErr(null, $('[data-err="ptype"]', form), ok ? '' : 'Please choose a project type to continue.');
+      if (!ok) $('input[name="ptype"]', form).focus();
+      return ok;
+    }
+    if (n === 1) {
+      const loc = $('#pro-loc');
+      const ok = loc.value.trim().length > 1;
+      setErr(loc, $('#pro-loc-err'), ok ? '' : 'Please enter the city or address of the project.');
+      if (!ok) loc.focus();
+      return ok;
+    }
+    const name = $('#pro-name'), phone = $('#pro-phone'), email = $('#pro-email');
+    const nameOk = name.value.trim().length > 1;
+    setErr(name, $('#pro-name-err'), nameOk ? '' : 'Please enter your name.');
+    const p = phone.value.trim(), m = email.value.trim();
+    let reachMsg = '';
+    if (!p && !m) reachMsg = 'Please enter a phone number or an email address.';
+    else if (p && !looksLikePhone(p)) reachMsg = 'That phone number looks too short. Please include the area code.';
+    else if (m && !looksLikeEmail(m)) reachMsg = 'That email address does not look complete.';
+    setErr(null, $('#pro-reach-err'), reachMsg);
+    phone.setAttribute('aria-invalid', String(!!reachMsg && (!m || !!p)));
+    email.setAttribute('aria-invalid', String(!!reachMsg && (!p || !!m)));
+    if (!nameOk) name.focus(); else if (reachMsg) (p || !m ? phone : email).focus();
+    return nameOk && !reachMsg;
+  }
+  btnNext.addEventListener('click', () => { if (validate(step)) showStep(step + 1); });
+  btnBack.addEventListener('click', () => showStep(step - 1));
+  form.addEventListener('change', (e) => { if (e.target.name === 'ptype') setErr(null, $('[data-err="ptype"]', form), ''); });
+  form.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.tagName === 'INPUT' && step < steps.length - 1) { e.preventDefault(); btnNext.click(); }
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validate(2)) return;
+    const first = $('#pro-name').value.trim().split(/\s+/)[0];
+    $('[data-done-title]', form).textContent = `Thanks, ${first}. Your request is in.`;
+    [...steps, $('.p-fnav', form), $('.p-prog', form)].forEach((el) => { el.hidden = true; });
+    done.hidden = false;
+    fadeIn(done, 10, 340);
+    $('[data-reset]', form).focus({ preventScroll: true });
+  });
+  $('[data-reset]', form).addEventListener('click', () => {
+    form.reset();
+    $$('[aria-invalid]', form).forEach((el) => el.setAttribute('aria-invalid', 'false'));
+    $$('.f-err', form).forEach((el) => { el.hidden = true; });
+    done.hidden = true;
+    $('.p-fnav', form).hidden = false;
+    $('.p-prog', form).hidden = false;
+    showStep(0);
+  });
+  function presetType(type) {
+    if (!done.hidden) $('[data-reset]', form).click();
+    const r = $(`input[name="ptype"][value="${CSS.escape(type)}"]`, form);
+    if (r) { r.checked = true; setErr(null, $('[data-err="ptype"]', form), ''); }
+    showStep(0, false);
+  }
+
+  /* ---------- Keyboard ---------- */
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.hidden) {
+      if (e.key === 'ArrowRight') { stepLb(1); return; }
+      if (e.key === 'ArrowLeft') { stepLb(-1); return; }
+    }
+    if (e.key !== 'Escape') return;
+    if (!lightbox.hidden) return closeLb();
+    if (!menu.hidden) closeMenu();
+  });
+
+  /* ---------- Open on the page named in the link, e.g. #projects ---------- */
+  const start = location.hash.slice(1);
+  if (start && start !== 'home' && pages.some((p) => p.dataset.page === start)) {
+    swap(start, {}, false);
+    moveNavBar(start, true);
+    requestAnimationFrame(updateHeader);
+  } else {
+    announce('home', false);
+  }
+})();
+</script>
+</body>
+</html>
